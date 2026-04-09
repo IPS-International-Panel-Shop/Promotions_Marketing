@@ -1,13 +1,20 @@
 name: Suburb Factory
 on: 
-  workflow_dispatch: # This adds a "Run" button so you can trigger it manually
+  workflow_dispatch: # This creates the manual "Play" button
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
       - name: Run Factory Script
         run: python factory.py
@@ -16,7 +23,8 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          mv dist/*.html . # Moves the pages from 'dist' to the root folder
-          git add *.html
-          git commit -m "Industrial Output: New suburb pages generated"
+          # Move files from dist folder to the root so they are live
+          cp -r dist/* . 
+          git add .
+          git commit -m "Industrial Output: Suburb pages generated" || exit 0
           git push
