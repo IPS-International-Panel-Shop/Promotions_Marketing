@@ -87,7 +87,7 @@ template = """
 
             <div class="lg:col-span-2 bg-slate-900 border border-white/10 p-10 rounded-3xl mt-8 lg:mt-24 shadow-2xl">
                 <h3 class="text-3xl mb-6 accent-text uppercase italic tracking-tighter">DRIVE NOW, PAY LATER</h3>
-                <p class="text-lg text-slate-400 mb-8 leading-relaxed">We are the only shop in the region offering specialized credit solutions via <strong>Mobicred</strong> and <strong>RCS</strong> through PayFast.</p>
+                <p class="text-lg text-slate-400 mb-8 leading-relaxed">We are the only shop in the region offering specialized credit solutions via <strong>Mobicred</strong> and <strong>RCS</strong> through Payfast.</p>
                 <div class="flex flex-wrap items-center gap-8 grayscale opacity-80 hover:grayscale-0 transition-all">
                     <img src="assets/mobicred.webp" alt="Mobicred" class="h-10">
                     <img src="assets/rcs.png" alt="RCS" class="h-10">
@@ -97,7 +97,7 @@ template = """
         </div>
 
         <section class="mt-32">
-            <h2 class="text-3xl md:text-5xl mb-16 uppercase text-center tracking-[0.2em] italic">The Standard of Excellence</h2>
+            <h2 class="text-3xl md:text-5xl mb-16 uppercase text-center tracking-[0.2em] italic font-bold">The IPS Standard</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="group space-y-4">
                     <img src="assets/audi-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all">
@@ -111,7 +111,7 @@ template = """
                 </div>
                 <div class="group space-y-4">
                     <img src="assets/merc-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all">
-                    <img src="assets/merc after.jpg.jpg" class="w-full rounded-2xl border-4 border-[#D5FF3F]">
+                    <img src="assets/merc-after.jpg" class="w-full rounded-2xl border-4 border-[#D5FF3F]">
                     <p class="text-sm text-center uppercase tracking-widest opacity-60 font-bold">Mercedes Refinishing</p>
                 </div>
             </div>
@@ -121,8 +121,8 @@ template = """
     <footer class="bg-slate-950 py-20 px-6 mt-32 border-t border-white/10 text-center">
         <img src="assets/ipslogo.png" alt="IPS" class="h-12 mx-auto mb-8">
         <img src="assets/google.webp" alt="Google Reviews" class="h-16 mx-auto mb-10">
-        <p class="text-xl text-slate-300 font-bold tracking-widest mb-2 uppercase">7 Bloem Street, Townsend Estate, Goodwood</p>
-        <p class="text-slate-600 text-sm italic tracking-wide">© 2026 International Panel Shop | Servicing {suburb} & The Greater Western Cape</p>
+        <p class="text-xl text-slate-300 font-bold tracking-widest mb-2 uppercase italic">7 Bloem Street, Townsend Estate, Goodwood</p>
+        <p class="text-slate-600 text-sm italic tracking-wide font-medium">© 2026 International Panel Shop | Servicing {suburb} & The Greater Western Cape</p>
     </footer>
 
 </body>
@@ -132,8 +132,10 @@ template = """
 if not os.path.exists("dist"): os.makedirs("dist")
 
 for s in suburbs:
-    filename = s.lower().replace(" ", "-") + ".html"
-    with open(f"dist/{{filename}}", "w", encoding="utf-8") as f:
-        f.write(template.format(suburb=s, filename=filename))
+    # Clean the filename properly
+    file_name = s.lower().replace(" ", "-") + ".html"
+    # Use standard f-string without the extra braces
+    with open(f"dist/{file_name}", "w", encoding="utf-8") as f:
+        f.write(template.format(suburb=s, filename=file_name))
 
-print(f"✅ Branded Factory Output Complete for {{len(suburbs)}} Zones.")
+print(f"✅ Factory Output Complete for {len(suburbs)} Zones.")
