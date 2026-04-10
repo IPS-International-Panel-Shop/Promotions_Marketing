@@ -1,1 +1,3 @@
-User-agent: *\nAllow: /\nSitemap: https://promo.intpanelshop.co.za/sitemap.xml
+User-agent: *
+Allow: /
+Sitemap: https://promo.intpanelshop.co.za/sitemap.xml
