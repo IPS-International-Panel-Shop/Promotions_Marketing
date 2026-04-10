@@ -10,12 +10,12 @@ suburbs = [
     "Constantia", "Northern Suburbs", "Claremont"
 ]
 
-# Generate Services HTML beforehand to avoid .format() errors
+# Pre-generating services to avoid .format() index errors
 services = [
     "Panelbeating", "Spray Painting", "Scratch & Dent Repair", 
     "Buff and Polish", "Rust Repairs", "Write off Repairs", "Accident Damage"
 ]
-services_list_html = "".join([f'<div class="border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors"><h4 class="text-2xl font-black uppercase tracking-tighter">{s}</h4></div>' for s in services])
+services_list_html = "".join([f'<div class="border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors"><h4 class="text-2xl font-black uppercase tracking-tighter brand-font">{s}</h4></div>' for s in services])
 
 template = """
 <!DOCTYPE html>
@@ -45,29 +45,30 @@ template = """
     <nav class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 p-5">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <img src="assets/ipslogo.png" alt="IPS Logo" class="h-10 md:h-16">
-            <a href="tel:+27218018007" class="accent-text font-black text-xl tracking-tighter">021 801 8007</a>
+            <a href="tel:+27218018007" class="accent-text font-black text-xl tracking-tighter uppercase brand-font">021 801 8007</a>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto px-6 md:px-10 py-16">
         
         <div class="grid lg:grid-cols-12 gap-12 items-start mb-32">
-            <div class="lg:col-span-8 text-left">
-                <span class="inline-block px-4 py-1 accent-bg text-black font-black text-sm uppercase mb-6 rounded-sm tracking-widest">
+            
+            <div class="lg:col-span-8 space-y-10">
+                <span class="inline-block px-4 py-1 accent-bg text-black font-black text-sm uppercase rounded-sm tracking-widest">
                     Serving {suburb}
                 </span>
-                <h1 class="text-6xl md:text-8xl lg:text-[10rem] mb-8 leading-[0.8] tracking-[-0.05em] uppercase">
+                <h1 class="text-6xl md:text-8xl lg:text-[10rem] leading-[0.8] tracking-[-0.05em] uppercase brand-font">
                     INTERNATIONAL<br><span class="accent-text">PANEL SHOP</span>
                 </h1>
                 
-                <div class="space-y-8 mb-12 text-2xl md:text-3xl text-slate-200 font-medium leading-tight">
+                <div class="space-y-8 text-2xl md:text-3xl text-slate-200 font-medium max-w-3xl">
                     <p>Premium structural repairs and factory-grade spray painting for the <span class="text-white font-black uppercase tracking-tight">{suburb}</span> zone.</p>
                     <p class="border-l-8 border-[#D5FF3F] pl-6 italic text-xl md:text-2xl text-slate-400 leading-snug">
                         <strong>Collection & Drop-off Available:</strong> Free within 15km. Standard Uber rates apply for return trips outside this radius.
                     </p>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-center gap-10">
+                <div class="flex flex-col sm:flex-row items-center gap-10 pt-6">
                     <a href="https://wa.me/27661180036" class="w-full sm:w-auto accent-bg text-black px-12 py-7 rounded-2xl font-black text-3xl text-center hover:scale-105 transition-all shadow-[0_0_30px_rgba(213,255,63,0.3)]">
                         WhatsApp Quote
                     </a>
@@ -75,12 +76,12 @@ template = """
                 </div>
             </div>
 
-            <div class="lg:col-span-4 bg-slate-900/80 border border-white/10 p-12 rounded-[2rem] mt-12 lg:mt-48 shadow-2xl">
+            <div class="lg:col-span-4 bg-[#111827]/80 border border-white/10 p-12 rounded-[2rem] lg:mt-32 shadow-2xl backdrop-blur-sm">
                 <h3 class="text-4xl mb-8 accent-text uppercase italic tracking-tighter brand-font leading-none">DRIVE NOW<br>PAY LATER</h3>
                 <p class="text-xl text-slate-300 mb-10 leading-relaxed">The only shop in the region offering specialized credit solutions via <strong>Mobicred</strong> and <strong>RCS</strong> through Payfast.</p>
-                <div class="flex flex-wrap items-center gap-10">
-                    <img src="assets/mobicred.webp" alt="Mobicred" class="h-10 md:h-12">
-                    <img src="assets/rcs.png" alt="RCS" class="h-10 md:h-12">
+                <div class="space-y-8">
+                    <img src="assets/mobicred.webp" alt="Mobicred" class="h-12 w-auto">
+                    <img src="assets/rcs.png" alt="RCS" class="h-12 w-auto">
                 </div>
             </div>
         </div>
@@ -93,7 +94,7 @@ template = """
             
             <div class="bg-white/5 border border-dashed border-[#D5FF3F]/30 p-10 rounded-3xl text-center">
                 <h3 class="text-3xl mb-6 font-bold uppercase tracking-widest brand-font">Insurance Quotes Provided</h3>
-                <a href="https://wa.me/27661180036" class="inline-block border-2 border-[#D5FF3F] text-[#D5FF3F] px-10 py-5 rounded-xl font-black text-2xl hover:accent-bg hover:text-black transition-all">
+                <a href="https://wa.me/27661180036" class="inline-block border-2 border-[#D5FF3F] text-[#D5FF3F] px-12 py-6 rounded-xl font-black text-2xl hover:accent-bg hover:text-black transition-all">
                     GET QUOTE NOW
                 </a>
             </div>
@@ -102,20 +103,20 @@ template = """
         <section class="mb-32">
             <h2 class="text-4xl md:text-6xl mb-16 uppercase italic tracking-[0.2em] text-center brand-font">Precision Workmanship</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="group space-y-6">
+                <div class="group space-y-6 text-center">
                     <img src="assets/audi-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
                     <img src="assets/audi-after.jpg" class="w-full rounded-2xl border-4 border-[#D5FF3F]">
-                    <p class="text-lg text-center uppercase tracking-widest opacity-60 font-black">Audi Refinishing</p>
+                    <p class="text-lg uppercase tracking-widest opacity-60 font-black">Audi Refinishing</p>
                 </div>
-                <div class="group space-y-6">
+                <div class="group space-y-6 text-center">
                     <img src="assets/bmw-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
                     <img src="assets/bmw-after.jpeg" class="w-full rounded-2xl border-4 border-[#D5FF3F]">
-                    <p class="text-lg text-center uppercase tracking-widest opacity-60 font-black">BMW Structural</p>
+                    <p class="text-lg uppercase tracking-widest opacity-60 font-black">BMW Structural</p>
                 </div>
-                <div class="group space-y-6">
+                <div class="group space-y-6 text-center">
                     <img src="assets/merc-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
                     <img src="assets/merc after.jpg" class="w-full rounded-2xl border-4 border-[#D5FF3F]">
-                    <p class="text-lg text-center uppercase tracking-widest opacity-60 font-black">Mercedes Refinishing</p>
+                    <p class="text-lg uppercase tracking-widest opacity-60 font-black">Mercedes Refinishing</p>
                 </div>
             </div>
         </section>
@@ -125,9 +126,9 @@ template = """
         <img src="assets/ipslogo.png" alt="IPS" class="h-16 mx-auto mb-12">
         <img src="assets/google.webp" alt="Google Reviews" class="h-32 mx-auto mb-12">
         <div class="space-y-4">
-            <p class="text-2xl text-white font-black uppercase tracking-widest leading-none brand-font">7 Bloem Street, Townsend Estate, Goodwood</p>
+            <p class="text-2xl text-white font-black uppercase tracking-widest brand-font">7 Bloem Street, Townsend Estate, Goodwood</p>
             <p class="text-slate-500 text-lg italic uppercase tracking-widest font-medium">International Panel Shop | Estd 2003</p>
-            <p class="text-slate-700 text-sm mt-8 uppercase tracking-tighter">© 2026 Serving {suburb} and the Western Cape</p>
+            <p class="text-slate-700 text-sm mt-12 uppercase tracking-tighter">© 2026 Serving {suburb} and the Western Cape</p>
         </div>
     </footer>
 
@@ -139,8 +140,8 @@ if not os.path.exists("dist"): os.makedirs("dist")
 
 for s in suburbs:
     file_name = s.lower().replace(" ", "-") + ".html"
-    with open(f"dist/{{file_name}}", "w", encoding="utf-8") as f:
-        # Fixed formatting for services_list_html
+    with open(f"dist/{file_name}", "w", encoding="utf-8") as f:
+        # Pass the pre-generated HTML directly
         f.write(template.format(suburb=s, services_list_html=services_list_html))
 
-print(f"✅ Factory Build Complete for {{len(suburbs)}} Areas.")
+print(f"✅ Master Factory Build Complete for {len(suburbs)} Areas.")
