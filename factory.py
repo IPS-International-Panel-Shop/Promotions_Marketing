@@ -10,7 +10,6 @@ suburbs = [
     "Constantia", "Northern Suburbs", "Claremont"
 ]
 
-# Pre-generating services to avoid .format() index errors
 services = [
     "Panelbeating", "Spray Painting", "Scratch & Dent Repair", 
     "Buff and Polish", "Rust Repairs", "Write off Repairs", "Accident Damage"
@@ -57,13 +56,13 @@ template = """
                 <span class="inline-block px-4 py-1 accent-bg text-black font-black text-sm uppercase rounded-sm tracking-widest">
                     Serving {suburb}
                 </span>
-                <h2 class="text-6xl md:text-8xl lg:text-[10rem] leading-[0.8] tracking-[-0.05em] uppercase brand-font">
+                <h1 class="text-5xl md:text-7xl lg:text-[7rem] leading-[0.85] tracking-[-0.05em] uppercase brand-font">
                     INTERNATIONAL<br><span class="accent-text">PANEL SHOP</span>
-                </h2>
+                </h1>
                 
-                <div class="space-y-8 text-2xl md:text-3xl text-slate-200 font-medium max-w-3xl">
+                <div class="space-y-8 text-2xl md:text-3xl text-slate-200 font-medium max-w-3xl leading-snug">
                     <p>Premium structural repairs and factory-grade spray painting for the <span class="text-white font-black uppercase tracking-tight">{suburb}</span> zone.</p>
-                    <p class="border-l-8 border-[#D5FF3F] pl-6 italic text-xl md:text-2xl text-slate-400 leading-snug">
+                    <p class="border-l-8 border-[#D5FF3F] pl-6 italic text-xl md:text-2xl text-slate-400 leading-tight">
                         <strong>Collection & Drop-off Available:</strong> Free within 15km. Standard Uber rates apply for return trips outside this radius.
                     </p>
                 </div>
@@ -76,7 +75,7 @@ template = """
                 </div>
             </div>
 
-            <div class="lg:col-span-4 bg-[#111827]/80 border border-white/10 p-12 rounded-[2rem] lg:mt-32 shadow-2xl backdrop-blur-sm">
+            <div class="lg:col-span-4 bg-[#111827]/80 border border-white/10 p-12 rounded-[2rem] lg:mt-16 shadow-2xl backdrop-blur-sm">
                 <h3 class="text-4xl mb-8 accent-text uppercase italic tracking-tighter brand-font leading-none">DRIVE NOW<br>PAY LATER</h3>
                 <p class="text-xl text-slate-300 mb-10 leading-relaxed">The only shop in the region offering specialized credit solutions via <strong>Mobicred</strong> and <strong>RCS</strong> through Payfast.</p>
                 <div class="space-y-8">
@@ -100,20 +99,20 @@ template = """
             </div>
         </section>
 
-        <section class="mb-32">
-            <h2 class="text-4xl md:text-6xl mb-16 uppercase italic tracking-[0.2em] text-center brand-font">Precision Workmanship</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="group space-y-6 text-center">
+        <section class="mb-32 text-center">
+            <h2 class="text-4xl md:text-6xl mb-16 uppercase italic tracking-[0.2em] brand-font text-center">Precision Workmanship</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="group space-y-6">
                     <img src="assets/audi-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
                     <img src="assets/audi-after.jpg" class="w-full rounded-2xl border-4 border-[#D5FF3F]">
                     <p class="text-lg uppercase tracking-widest opacity-60 font-black">Audi Refinishing</p>
                 </div>
-                <div class="group space-y-6 text-center">
+                <div class="group space-y-6">
                     <img src="assets/bmw-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
                     <img src="assets/bmw-after.jpeg" class="w-full rounded-2xl border-4 border-[#D5FF3F]">
                     <p class="text-lg uppercase tracking-widest opacity-60 font-black">BMW Structural</p>
                 </div>
-                <div class="group space-y-6 text-center">
+                <div class="group space-y-6">
                     <img src="assets/merc-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
                     <img src="assets/merc after.jpg" class="w-full rounded-2xl border-4 border-[#D5FF3F]">
                     <p class="text-lg uppercase tracking-widest opacity-60 font-black">Mercedes Refinishing</p>
@@ -124,7 +123,7 @@ template = """
 
     <footer class="bg-black py-24 px-8 border-t border-white/10 text-center">
         <img src="assets/ipslogo.png" alt="IPS" class="h-16 mx-auto mb-12">
-        <img src="assets/google.webp" alt="Google Reviews" class="h-32 mx-auto mb-12">
+        <img src="assets/google.webp" alt="Google Reviews" class="h-32 mx-auto mb-12 text-center">
         <div class="space-y-4">
             <p class="text-2xl text-white font-black uppercase tracking-widest brand-font">7 Bloem Street, Townsend Estate, Goodwood</p>
             <p class="text-slate-500 text-lg italic uppercase tracking-widest font-medium">International Panel Shop | Estd 2003</p>
@@ -141,7 +140,7 @@ if not os.path.exists("dist"): os.makedirs("dist")
 for s in suburbs:
     file_name = s.lower().replace(" ", "-") + ".html"
     with open(f"dist/{file_name}", "w", encoding="utf-8") as f:
-        # Pass the pre-generated HTML directly
+        # Fixed format call to include services_list_html correctly
         f.write(template.format(suburb=s, services_list_html=services_list_html))
 
-print(f"✅ Master Factory Build Complete for {len(suburbs)} Areas.")
+print(f"✅ Factory Build Complete for {len(suburbs)} Areas.")
