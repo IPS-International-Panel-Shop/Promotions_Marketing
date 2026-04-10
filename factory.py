@@ -12,14 +12,13 @@ suburbs = [
 
 template = """
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expert Auto Body Repair in {suburb} | International Panel Shop</title>
     
     <link rel="icon" type="image/png" href="assets/ipslogo.png">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
     
@@ -47,82 +46,99 @@ template = """
         "postalCode": "8001",
         "addressCountry": "ZA"
       }},
-      "geo": {{
-        "@type": "GeoCoordinates",
-        "latitude": -33.9319,
-        "longitude": 18.4233
-      }},
       "url": "https://promo.intpanelshop.co.za/{filename}",
-      "telephone": "+27218018007",
-      "priceRange": "$$"
+      "telephone": "+27218018007"
     }}
     </script>
 </head>
-<body class="bg-[#000000] text-white">
+<body class="bg-black text-white antialiased">
 
-    <nav class="p-6 border-b border-white/10 flex justify-between items-center max-w-7xl mx-auto">
-        <img src="assets/ipslogo.png" alt="IPS Logo" class="h-12">
-        <div class="hidden md:block text-sm font-bold tracking-widest uppercase accent-text">
-            Estd 2003 | Quality Meets Affordability
+    <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <img src="assets/ipslogo.png" alt="IPS Logo" class="h-10 md:h-14">
+            <a href="tel:+27218018007" class="accent-text font-bold text-sm tracking-tighter md:text-base">CALL WORKSHOP</a>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-12">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
             
-            <div>
-                <span class="inline-block px-4 py-1 accent-bg text-black font-black text-xs uppercase mb-6 rounded">
-                    Now Serving {suburb}
+            <div class="text-left">
+                <span class="inline-block px-3 py-1 accent-bg text-black font-black text-[10px] uppercase mb-4 rounded-sm tracking-widest">
+                    Now Servicing {suburb}
                 </span>
-                <h1 class="text-5xl md:text-7xl mb-6 leading-tight">INTERNATIONAL<br>PANEL SHOP</h1>
-                <p class="text-xl text-slate-400 leading-relaxed mb-8">
-                    Premium structural repairs and factory-grade spray painting for high-spec vehicles in <span class="text-white font-bold">{suburb}</span>.
+                <h1 class="text-4xl md:text-6xl lg:text-7xl mb-6 leading-[0.9] tracking-tighter uppercase">
+                    INTERNATIONAL<br><span class="accent-text">PANEL SHOP</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 leading-relaxed mb-8 max-w-xl">
+                    High-spec structural repairs and factory-finish spray painting for the <span class="text-white font-bold">{suburb}</span> zone. Where quality meets affordability.
                 </p>
                 
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/27661180036" class="accent-bg text-black px-10 py-5 rounded-full font-black text-xl hover:scale-105 transition-transform">
-                        WhatsApp for Quote
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/27661180036" class="accent-bg text-black px-8 py-5 rounded-xl font-black text-xl text-center hover:scale-105 transition-all">
+                        WhatsApp Quote
                     </a>
-                    <a href="tel:+27218018007" class="border-2 border-white/20 hover:bg-white/10 px-10 py-5 rounded-full font-bold text-xl transition-all">
-                        Call Workshop
+                    <a href="tel:+27218018007" class="border border-white/20 hover:bg-white/5 px-8 py-5 rounded-xl font-bold text-xl text-center transition-all">
+                        Call Now
                     </a>
                 </div>
             </div>
 
-            <div class="bg-slate-900 border border-white/10 p-8 rounded-3xl">
-                <h3 class="text-2xl mb-4 accent-text uppercase italic">Drive Now, Pay Later</h3>
-                <p class="text-slate-400 mb-6">We are the only shop in the region offering flexible credit through Mobicred and RCS via PayFast.</p>
-                <div class="flex items-center gap-6 opacity-80">
-                    <img src="https://mobicred.co.za/images/logo.png" alt="Mobicred" class="h-8 filter brightness-200">
-                    <img src="https://www.payfast.co.za/assets/images/logo.svg" alt="PayFast" class="h-6 filter brightness-200">
+            <div class="bg-slate-900/50 border border-white/10 p-6 md:p-10 rounded-3xl relative overflow-hidden group">
+                <div class="absolute -right-10 -top-10 w-32 h-32 accent-bg opacity-10 rounded-full blur-3xl"></div>
+                <h3 class="text-2xl mb-4 accent-text uppercase italic tracking-tighter">FINANCING AVAILABLE</h3>
+                <p class="text-slate-400 mb-8 text-sm md:text-base">We are the only shop in the region offering flexible credit solutions. Repair your vehicle now and pay over time.</p>
+                <div class="flex flex-wrap items-center gap-6 grayscale hover:grayscale-0 transition-all">
+                    <img src="https://mobicred.co.za/images/logo.png" alt="Mobicred" class="h-6 md:h-8">
+                    <img src="https://www.payfast.co.za/assets/images/logo.svg" alt="PayFast" class="h-5 md:h-6">
                 </div>
             </div>
         </div>
 
         <section class="mt-24">
-            <h2 class="text-3xl mb-12 uppercase text-center tracking-widest">Mastering the Finish</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="space-y-4">
-                    <div class="rounded-2xl overflow-hidden border border-white/5"><img src="assets/audi-before.jpg" class="w-full"></div>
-                    <div class="rounded-2xl overflow-hidden border border-white/5 accent-bg p-1"><img src="assets/audi-after.jpg" class="w-full rounded-xl"></div>
+            <h2 class="text-2xl md:text-4xl mb-12 uppercase text-center tracking-[0.2em] italic">Workmanship Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/10 mb-2">
+                        <img src="assets/audi-before.jpg" alt="Audi Before" class="w-full grayscale group-hover:grayscale-0 transition-all">
+                        <div class="absolute top-2 left-2 bg-black/60 px-2 py-1 text-[10px] font-bold">BEFORE</div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-[#D5FF3F]">
+                        <img src="assets/audi-after.jpg" alt="Audi After" class="w-full">
+                        <div class="absolute top-2 left-2 accent-bg text-black px-2 py-1 text-[10px] font-bold">AFTER</div>
+                    </div>
                 </div>
-                <div class="space-y-4">
-                    <div class="rounded-2xl overflow-hidden border border-white/5"><img src="assets/bmw-before.jpg" class="w-full"></div>
-                    <div class="rounded-2xl overflow-hidden border border-white/5 accent-bg p-1"><img src="assets/bmw-after.jpeg" class="w-full rounded-xl"></div>
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/10 mb-2">
+                        <img src="assets/bmw-before.jpg" alt="BMW Before" class="w-full grayscale group-hover:grayscale-0 transition-all">
+                        <div class="absolute top-2 left-2 bg-black/60 px-2 py-1 text-[10px] font-bold">BEFORE</div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-[#D5FF3F]">
+                        <img src="assets/bmw-after.jpeg" alt="BMW After" class="w-full">
+                        <div class="absolute top-2 left-2 accent-bg text-black px-2 py-1 text-[10px] font-bold">AFTER</div>
+                    </div>
                 </div>
-                <div class="space-y-4">
-                    <div class="rounded-2xl overflow-hidden border border-white/5"><img src="assets/merc-before.jpg" class="w-full"></div>
-                    <div class="rounded-2xl overflow-hidden border border-white/5 accent-bg p-1"><img src="assets/merc-after.jpg" class="w-full rounded-xl"></div>
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/10 mb-2">
+                        <img src="assets/merc-before.jpg" alt="Merc Before" class="w-full grayscale group-hover:grayscale-0 transition-all">
+                        <div class="absolute top-2 left-2 bg-black/60 px-2 py-1 text-[10px] font-bold">BEFORE</div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-[#D5FF3F]">
+                        <img src="assets/merc-after.jpg" alt="Merc After" class="w-full">
+                        <div class="absolute top-2 left-2 accent-bg text-black px-2 py-1 text-[10px] font-bold">AFTER</div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-white/5 border-t border-white/10 p-12 mt-20">
-        <div class="max-w-7xl mx-auto text-center">
-            <img src="assets/ipslogo.png" alt="IPS" class="h-8 mx-auto mb-6">
-            <p class="text-slate-500 text-sm italic">140 Upper Canterbury St, Gardens, Cape Town</p>
-            <p class="mt-4 text-xs tracking-widest text-slate-600 uppercase">Expert Automotive Refinishing for {suburb} & Surroundings</p>
+    <footer class="bg-slate-900 border-t border-white/10 py-16 px-6 mt-20">
+        <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+            <img src="assets/ipslogo.png" alt="IPS" class="h-10 opacity-50">
+            <div class="text-center">
+                <p class="text-slate-400 text-xs md:text-sm uppercase tracking-widest mb-2">140 Upper Canterbury St, Gardens, Cape Town</p>
+                <p class="text-slate-600 text-[10px]">© 2024 International Panel Shop | Servicing {suburb}</p>
+            </div>
         </div>
     </footer>
 
@@ -137,8 +153,4 @@ for s in suburbs:
     with open(f"dist/{filename}", "w", encoding="utf-8") as f:
         f.write(template.format(suburb=s, filename=filename))
 
-# Create robots.txt to specifically call to AI and Search Bots
-with open("dist/robots.txt", "w") as r:
-    r.write("User-agent: *\\nAllow: /\\n\\nSitemap: https://promo.intpanelshop.co.za/sitemap.xml")
-
-print(f"✅ Factory Output: {len(suburbs)} pages generated with Brand Guidelines.")
+print(f"✅ Factory Output: {len(suburbs)} responsive pages generated.")
