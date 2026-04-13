@@ -14,6 +14,8 @@ suburbs = [
     "West Coast Village"
 ]
 
+services = ["Panelbeating", "Spray Painting", "Scratch & Dent Repair", "Buff and Polish", "Rust Repairs", "Write off Repairs", "Accident Damage"]
+
 # Service Icons Mapping (Lucide-style SVG paths)
 service_icons = {
     "Panelbeating": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>',
@@ -51,8 +53,7 @@ template = """
         body {{ font-family: 'Avenir LT Std', sans-serif !important; font-size: 1.25rem; }}
         .accent-text {{ color: #D5FF3F; }}
         .accent-bg {{ background-color: #D5FF3F; }}
-        /* Centering the EmbedSocial Widget */
-        .embedsocial-widget {{ margin: 0 auto !important; max-width: 600px !important; }}
+        .embedsocial-widget {{ margin: 0 auto !important; max-width: 800px !important; }}
     </style>
 </head>
 <body class="bg-black text-white antialiased">
@@ -72,35 +73,28 @@ template = """
                 </h1>
                 
                 <div class="space-y-6 text-xl md:text-2xl text-slate-200 font-medium max-w-2xl leading-snug">
-                    <p>Professional auto body repairs and paint for the <span class="text-white font-black uppercase tracking-tight">{suburb}</span> area.</p>
+                    <p>Professional auto body repairs and factory-grade spray painting for the {suburb} area.</p>
                     <p class="border-l-8 border-[#D5FF3F] pl-6 italic text-lg md:text-xl text-slate-400">
-                        <strong>Collection & Drop-off:</strong> Free within a 15km radius. For distances exceeding 15km, standard Uber rates apply for the return trip to/from our Goodwood shop.
+                        <strong>Collection & Drop-off:</strong> We offer free collection and drop-off within a 15km radius. For distances further than 15km, standard Uber rates apply for our team to return to/from the shop in Goodwood.
                     </p>
                 </div>
 
-                <div class="pt-4">
+                <div class="pt-4 flex justify-start">
                     <a href="https://wa.me/27716871308" class="inline-block w-full sm:w-auto accent-bg text-black px-12 py-7 rounded-2xl font-black text-3xl text-center hover:scale-105 transition-all">WhatsApp Quote</a>
                 </div>
                 
-                <div class="pt-10 text-center">
-                    <h3 class="text-[#D5FF3F] uppercase font-black tracking-widest text-xs mb-6">Live Feedback (4.8 Stars)</h3>
-                    <div id="custom-html-4k">
-                        <div class="embedsocial-widget" data-ref="e26c4526b8173a0c8c5955ccabcc2458"></div>
-                        <script>
-                            (function(d, s, id) {{
-                                var js; if (d.getElementById(id)) {{return;}}
-                                js = d.createElement(s); js.id = id;
-                                js.src = "https://embedsocial.com/cdn/aht.js";
-                                d.getElementsByTagName("head")[0].appendChild(js);
-                            }}(document, "script", "EmbedSocialWidgetScript"));
-                        </script>
+                <div class="pt-16">
+                    <h3 class="text-[#D5FF3F] uppercase font-black tracking-widest text-xs mb-8 text-center">Verified Customer Reviews (4.8 Stars)</h3>
+                    <div class="flex justify-center">
+                        <div class="embedsocial-widget w-full" data-ref="e26c4526b8173a0c8c5955ccabcc2458"></div>
                     </div>
+                    <script>(function(d, s, id) {{ var js; if (d.getElementById(id)) {{return;}} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/aht.js"; d.getElementsByTagName("head")[0].appendChild(js); }}(document, "script", "EmbedSocialWidgetScript"));</script>
                 </div>
             </div>
             
             <div class="lg:col-span-4 bg-[#111827]/80 border border-white/10 p-12 rounded-[2rem] lg:mt-10 shadow-2xl backdrop-blur-sm">
                 <h3 class="text-4xl mb-8 accent-text uppercase italic tracking-tighter brand-font leading-none">DRIVE NOW<br>PAY LATER</h3>
-                <p class="text-xl text-slate-300 mb-10 leading-relaxed font-bold italic uppercase">Secure credit via <strong>Mobicred</strong> and <strong>RCS Store Cards</strong>.</p>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed font-bold italic uppercase">Repairs on credit available via <strong>Mobicred</strong> and <strong>RCS Cards</strong>.</p>
                 <div class="space-y-8"><img src="assets/mobicred.webp" alt="Mobicred" class="h-12 w-auto"><img src="assets/rcs.png" alt="RCS" class="h-12 w-auto"></div>
             </div>
         </div>
@@ -111,21 +105,21 @@ template = """
         </section>
 
         <section class="mb-32 text-center uppercase font-bold italic">
-            <h2 class="text-4xl md:text-6xl mb-16 brand-font text-center font-black tracking-[0.2em]">Workmanship: {suburb}</h2>
+            <h2 class="text-4xl md:text-6xl mb-16 brand-font text-center font-black tracking-[0.2em]">Precision Workmanship</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                <div class="group space-y-6"><img src="assets/audi-before.jpg" alt="Audi Before" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500"><img src="assets/audi-after.jpg" alt="Audi After" class="w-full rounded-2xl border-4 border-[#D5FF3F]"><p class="text-lg uppercase tracking-widest opacity-60 font-black">Audi Refinishing</p></div>
-                <div class="group space-y-6"><img src="assets/bmw-before.jpg" alt="BMW Before" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500"><img src="assets/bmw-after.jpeg" alt="BMW After" class="w-full rounded-2xl border-4 border-[#D5FF3F]"><p class="text-lg uppercase tracking-widest opacity-60 font-black">BMW Structural</p></div>
-                <div class="group space-y-6"><img src="assets/merc-before.jpg" alt="Mercedes Before" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500"><img src="assets/merc after.jpg" alt="Mercedes After" class="w-full rounded-2xl border-4 border-[#D5FF3F]"><p class="text-lg uppercase tracking-widest opacity-60 font-black">Mercedes Refinishing</p></div>
+                <div class="group space-y-6"><img src="assets/audi-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500"><img src="assets/audi-after.jpg" class="w-full rounded-2xl border-4 border-[#D5FF3F]"><p class="text-lg uppercase tracking-widest opacity-60 font-black">Audi Refinishing</p></div>
+                <div class="group space-y-6"><img src="assets/bmw-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500"><img src="assets/bmw-after.jpeg" class="w-full rounded-2xl border-4 border-[#D5FF3F]"><p class="text-lg uppercase tracking-widest opacity-60 font-black">BMW Structural</p></div>
+                <div class="group space-y-6"><img src="assets/merc-before.jpg" class="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500"><img src="assets/merc after.jpg" class="w-full rounded-2xl border-4 border-[#D5FF3F]"><p class="text-lg uppercase tracking-widest opacity-60 font-black">Mercedes Refinishing</p></div>
             </div>
         </section>
     </main>
 
     <footer class="bg-black py-24 px-8 border-t border-white/10 text-center uppercase font-bold italic">
         <img src="assets/ipslogo.png" alt="IPS" class="h-16 mx-auto mb-6">
-        <img src="assets/google.webp" alt="Google Reviews" class="h-24 mx-auto mb-10 opacity-80">
+        <img src="assets/google.webp" alt="Google 4.8 Rating" class="h-24 mx-auto mb-10 opacity-90">
         <div class="space-y-4">
-            <p class="text-2xl text-white font-black brand-font tracking-widest uppercase">7 Bloem Street, Goodwood</p>
-            <p class="text-slate-700 text-sm mt-12 tracking-tighter font-normal opacity-50">© 2026 IPS // Satellite Node: {suburb}</p>
+            <p class="text-2xl text-white font-black brand-font tracking-widest uppercase">7 Bloem Street, Townsend Estate, Goodwood</p>
+            <p class="text-slate-700 text-sm mt-12 tracking-tighter font-normal opacity-50">© 2026 IPS // Satellite Authority Node: {suburb}</p>
         </div>
     </footer>
 </body>
@@ -140,4 +134,4 @@ for s in suburbs:
     with open(f"dist/{page_name}", "w", encoding="utf-8") as f:
         f.write(template.format(suburb=s, services_list_html=services_list_html))
 
-print(f"✅ Factory Build Complete: Before/After Images Restored.")
+print(f"✅ Factory Build Fixed: NameError Resolved. Gallery Restored. UI Polished.")
