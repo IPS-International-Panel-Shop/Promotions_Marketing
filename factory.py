@@ -1,7 +1,8 @@
 import os
+import shutil
 from datetime import datetime
 
-# 1. THE ASSETS & SETTINGS
+# 1. THE ASSETS & SETTINGS (41 TOTAL AREAS)
 suburbs = [
     "Cape Town", "Goodwood", "Durbanville", "Milnerton", "Sunningdale", 
     "Table View", "Bellville", "Gardens", "Sea Point", "Green Point", 
@@ -16,7 +17,7 @@ suburbs = [
 
 services = ["Panelbeating", "Spray Painting", "Scratch & Dent Repair", "Buff and Polish", "Rust Repairs", "Write off Repairs", "Accident Damage"]
 
-# Service Icons Mapping (Lucide-style SVG paths)
+# Service Icons Mapping
 service_icons = {
     "Panelbeating": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>',
     "Spray Painting": '<path d="m3 21 1.9-1.9M3 21v-4.5l5.8-5.7c.3-.3.7-.3 1 0l3.4 3.4c.3.3.3.7 0 1L7.5 21H3ZM12 8l3-3 2 2-3 3-2-2Z"></path><path d="M15 3h6v6"></path>',
@@ -41,7 +42,13 @@ template = """
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPS Auto Body Repair | Panelbeater near me in {suburb}</title>
-    <meta name="description" content="Expert auto body repair and panelbeater near me in {suburb}. International Panel Shop offers premium structural repairs, spray painting, and accident recovery for {suburb} residents.">
+    
+    <meta property="og:title" content="Expert Panelbeating in {suburb} | IPS">
+    <meta property="og:description" content="🚗 FREE Collection & Drop-off in {suburb}. 💳 Repair now, pay later with Mobicred & RCS store cards. Get your free quote today!">
+    <meta property="og:image" content="https://promo.intpanelshop.co.za/assets/social-card-ips.jpg">
+    <meta property="og:url" content="https://promo.intpanelshop.co.za/{page_name}">
+    <meta property="og:type" content="website">
+
     <link rel="icon" type="image/png" href="assets/ipslogo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
@@ -63,6 +70,15 @@ template = """
     </nav>
 
     <main class="max-w-7xl mx-auto px-6 md:px-10 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+            <div class="bg-[#D5FF3F] text-black p-4 rounded-xl text-center font-black uppercase text-sm tracking-widest">
+                🚗 Free {suburb} Collection & Drop-off
+            </div>
+            <div class="bg-white/10 text-white p-4 rounded-xl text-center font-black uppercase text-sm tracking-widest border border-white/20">
+                💳 Repairs on Credit: Mobicred & RCS
+            </div>
+        </div>
+
         <div class="grid lg:grid-cols-12 gap-12 items-start mb-32">
             <div class="lg:col-span-8 space-y-8 text-left">
                 <span class="inline-block px-4 py-1 accent-bg text-black font-black text-sm uppercase rounded-sm tracking-widest">Serving {suburb}</span>
@@ -73,24 +89,18 @@ template = """
                 <div class="space-y-6 text-xl md:text-2xl text-slate-200 font-medium max-w-2xl leading-snug">
                     <p>Professional auto body repairs and factory-grade spray painting for the {suburb} area.</p>
                     <p class="border-l-8 border-[#D5FF3F] pl-6 italic text-lg md:text-xl text-slate-400">
-                        <strong>Collection & Drop-off:</strong> We offer free collection and drop-off within a 15km radius. For distances further than 15km, standard Uber rates apply for our team to return to/from the shop in Goodwood.
+                        <strong>The VIP Experience:</strong> We collect your car from {suburb} for free (15km radius) and drop it back once perfected.
                     </p>
                 </div>
 
-                <div class="pt-4">
+                <div class="pt-4 flex justify-start">
                     <a href="https://wa.me/27716871308" class="inline-block w-full sm:w-auto accent-bg text-black px-12 py-7 rounded-2xl font-black text-3xl text-center hover:scale-105 transition-all">WhatsApp Quote</a>
-                </div>
-                
-                <div class="pt-16 text-center">
-                    <h3 class="text-[#D5FF3F] uppercase font-black tracking-widest text-xs mb-8">Verified Customer Reviews (4.8 Stars)</h3>
-                    <div class="embedsocial-widget w-full" data-ref="e26c4526b8173a0c8c5955ccabcc2458"></div>
-                    <script>(function(d, s, id) {{ var js; if (d.getElementById(id)) {{return;}} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/aht.js"; d.getElementsByTagName("head")[0].appendChild(js); }}(document, "script", "EmbedSocialWidgetScript"));</script>
                 </div>
             </div>
             
             <div class="lg:col-span-4 bg-[#111827]/80 border border-white/10 p-12 rounded-[2rem] lg:mt-10 shadow-2xl backdrop-blur-sm">
                 <h3 class="text-4xl mb-8 accent-text uppercase italic tracking-tighter brand-font leading-none">DRIVE NOW<br>PAY LATER</h3>
-                <p class="text-xl text-slate-300 mb-10 leading-relaxed font-bold italic uppercase">Repairs on credit available via <strong>Mobicred</strong> and <strong>RCS Cards</strong>.</p>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed font-bold italic uppercase">Secure financing via <strong>Mobicred</strong> and <strong>RCS Store Cards</strong> through Payfast.</p>
                 <div class="space-y-8"><img src="assets/mobicred.webp" alt="Mobicred" class="h-12 w-auto"><img src="assets/rcs.png" alt="RCS" class="h-12 w-auto"></div>
             </div>
         </div>
@@ -122,13 +132,14 @@ template = """
 </html>
 """
 
-# 3. RUNNER - FORCE DIST FOLDER FOR GITHUB ACTION COMPATIBILITY
-if not os.path.exists("dist"):
-    os.makedirs("dist")
+# 3. RUNNER
+if os.path.exists("dist"): shutil.rmtree("dist")
+os.makedirs("dist")
 
 for s in suburbs:
     page_name = s.lower().replace(" ", "-") + ".html"
     with open(os.path.join("dist", page_name), "w", encoding="utf-8") as f:
-        f.write(template.format(suburb=s, services_list_html=services_list_html))
+        # Note: Added page_name as a variable for the meta tags
+        f.write(template.format(suburb=s, services_list_html=services_list_html, page_name=page_name))
 
-print(f"✅ Factory Build Complete: {len(suburbs)} files generated in 'dist' for GitHub Action.")
+print(f"✅ Factory Build Complete: Social Cards updated with Credit and Collection highlights.")
