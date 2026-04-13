@@ -44,8 +44,10 @@ template = """
     <title>IPS Auto Body Repair | Panelbeater near me in {suburb}</title>
     
     <meta property="og:title" content="Expert Panelbeating in {suburb} | IPS">
-    <meta property="og:description" content="🚗 FREE Collection & Drop-off in {suburb}. 💳 Repair now, pay later with Mobicred & RCS store cards. Get your free quote today!">
-    <meta property="og:image" content="https://promo.intpanelshop.co.za/assets/social-card-ips.jpg">
+    <meta property="og:description" content="🚗 FREE Collection & Drop-off in {suburb}. 💳 Repair now, pay later with Mobicred & RCS. Get your free quote today!">
+    
+    <meta property="og:image" content="https://api.screenshotone.com/take?url=https://promo.intpanelshop.co.za/cards/{page_name}&viewport_width=1200&viewport_height=630&image_format=jpg">
+    
     <meta property="og:url" content="https://promo.intpanelshop.co.za/{page_name}">
     <meta property="og:type" content="website">
 
@@ -96,6 +98,14 @@ template = """
                 <div class="pt-4 flex justify-start">
                     <a href="https://wa.me/27716871308" class="inline-block w-full sm:w-auto accent-bg text-black px-12 py-7 rounded-2xl font-black text-3xl text-center hover:scale-105 transition-all">WhatsApp Quote</a>
                 </div>
+                
+                <div class="pt-16 text-center">
+                    <h3 class="text-[#D5FF3F] uppercase font-black tracking-widest text-xs mb-8">Verified Customer Reviews (4.8 Stars)</h3>
+                    <div class="flex justify-center">
+                        <div class="embedsocial-widget w-full" data-ref="e26c4526b8173a0c8c5955ccabcc2458"></div>
+                    </div>
+                    <script>(function(d, s, id) {{ var js; if (d.getElementById(id)) {{return;}} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/aht.js"; d.getElementsByTagName("head")[0].appendChild(js); }}(document, "script", "EmbedSocialWidgetScript"));</script>
+                </div>
             </div>
             
             <div class="lg:col-span-4 bg-[#111827]/80 border border-white/10 p-12 rounded-[2rem] lg:mt-10 shadow-2xl backdrop-blur-sm">
@@ -139,7 +149,6 @@ os.makedirs("dist")
 for s in suburbs:
     page_name = s.lower().replace(" ", "-") + ".html"
     with open(os.path.join("dist", page_name), "w", encoding="utf-8") as f:
-        # Note: Added page_name as a variable for the meta tags
         f.write(template.format(suburb=s, services_list_html=services_list_html, page_name=page_name))
 
-print(f"✅ Factory Build Complete: Social Cards updated with Credit and Collection highlights.")
+print(f"✅ Factory Build Complete: {len(suburbs)} Areas now have dynamic Social Media Cards.")
