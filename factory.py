@@ -16,7 +16,7 @@ suburbs = [
 
 services = ["Panelbeating", "Spray Painting", "Scratch & Dent Repair", "Buff and Polish", "Rust Repairs", "Write off Repairs", "Accident Damage"]
 
-# Service Icons Mapping (Lucide-style SVG paths)
+# Service Icons Mapping
 service_icons = {
     "Panelbeating": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>',
     "Spray Painting": '<path d="m3 21 1.9-1.9M3 21v-4.5l5.8-5.7c.3-.3.7-.3 1 0l3.4 3.4c.3.3.3.7 0 1L7.5 21H3ZM12 8l3-3 2 2-3 3-2-2Z"></path><path d="M15 3h6v6"></path>',
@@ -41,9 +41,7 @@ template = """
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPS Auto Body Repair | Panelbeater near me in {suburb}</title>
-    
     <meta name="description" content="Expert auto body repair and panelbeater near me in {suburb}. International Panel Shop offers premium structural repairs, spray painting, and accident recovery for {suburb} residents.">
-    
     <link rel="icon" type="image/png" href="assets/ipslogo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
@@ -126,12 +124,11 @@ template = """
 </html>
 """
 
-# 3. RUNNER & AI FILE GENERATION
-if not os.path.exists("dist"): os.makedirs("dist")
-
+# 3. RUNNER - DEPLOY TO ROOT
 for s in suburbs:
     page_name = s.lower().replace(" ", "-") + ".html"
-    with open(f"dist/{page_name}", "w", encoding="utf-8") as f:
+    # Note: No 'dist/' prefix - writing directly to root
+    with open(page_name, "w", encoding="utf-8") as f:
         f.write(template.format(suburb=s, services_list_html=services_list_html))
 
-print(f"✅ Factory Build Fixed: NameError Resolved. Gallery Restored. UI Polished.")
+print(f"✅ Factory Build Complete: Overwriting {len(suburbs)} files in Root.")
