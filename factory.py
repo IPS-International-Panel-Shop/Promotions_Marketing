@@ -16,7 +16,7 @@ suburbs = [
 
 services = ["Panelbeating", "Spray Painting", "Scratch & Dent Repair", "Buff and Polish", "Rust Repairs", "Write off Repairs", "Accident Damage"]
 
-# Service Icons Mapping
+# Service Icons Mapping (Lucide-style SVG paths)
 service_icons = {
     "Panelbeating": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>',
     "Spray Painting": '<path d="m3 21 1.9-1.9M3 21v-4.5l5.8-5.7c.3-.3.7-.3 1 0l3.4 3.4c.3.3.3.7 0 1L7.5 21H3ZM12 8l3-3 2 2-3 3-2-2Z"></path><path d="M15 3h6v6"></path>',
@@ -77,15 +77,13 @@ template = """
                     </p>
                 </div>
 
-                <div class="pt-4 flex justify-start">
+                <div class="pt-4">
                     <a href="https://wa.me/27716871308" class="inline-block w-full sm:w-auto accent-bg text-black px-12 py-7 rounded-2xl font-black text-3xl text-center hover:scale-105 transition-all">WhatsApp Quote</a>
                 </div>
                 
-                <div class="pt-16">
-                    <h3 class="text-[#D5FF3F] uppercase font-black tracking-widest text-xs mb-8 text-center">Verified Customer Reviews (4.8 Stars)</h3>
-                    <div class="flex justify-center">
-                        <div class="embedsocial-widget w-full" data-ref="e26c4526b8173a0c8c5955ccabcc2458"></div>
-                    </div>
+                <div class="pt-16 text-center">
+                    <h3 class="text-[#D5FF3F] uppercase font-black tracking-widest text-xs mb-8">Verified Customer Reviews (4.8 Stars)</h3>
+                    <div class="embedsocial-widget w-full" data-ref="e26c4526b8173a0c8c5955ccabcc2458"></div>
                     <script>(function(d, s, id) {{ var js; if (d.getElementById(id)) {{return;}} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/aht.js"; d.getElementsByTagName("head")[0].appendChild(js); }}(document, "script", "EmbedSocialWidgetScript"));</script>
                 </div>
             </div>
@@ -124,11 +122,13 @@ template = """
 </html>
 """
 
-# 3. RUNNER - DEPLOY TO ROOT
+# 3. RUNNER - FORCE DIST FOLDER FOR GITHUB ACTION COMPATIBILITY
+if not os.path.exists("dist"):
+    os.makedirs("dist")
+
 for s in suburbs:
     page_name = s.lower().replace(" ", "-") + ".html"
-    # Note: No 'dist/' prefix - writing directly to root
-    with open(page_name, "w", encoding="utf-8") as f:
+    with open(os.path.join("dist", page_name), "w", encoding="utf-8") as f:
         f.write(template.format(suburb=s, services_list_html=services_list_html))
 
-print(f"✅ Factory Build Complete: Overwriting {len(suburbs)} files in Root.")
+print(f"✅ Factory Build Complete: {len(suburbs)} files generated in 'dist' for GitHub Action.")
