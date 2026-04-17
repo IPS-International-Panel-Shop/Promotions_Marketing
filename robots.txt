@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+# Direct AI Agents to their specific instruction file
+Link: <https://promo.intpanelshop.co.za/ai-agents.txt>; rel="ai-agents"
+
 Sitemap: https://promo.intpanelshop.co.za/sitemap.xml
