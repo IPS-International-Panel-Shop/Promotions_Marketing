@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 
 # Direct AI Agents to their specific instruction file
-Link: <https://promo.intpanelshop.co.za/ai-agents.txt>; rel="ai-agents"
+# Using both Link and X-AI-Context for maximum compatibility
+Link: <https://promo.intpanelshop.co.za/ai-context.txt>; rel="ai-agents"
+X-AI-Context: https://promo.intpanelshop.co.za/ai-context.txt
 
+# Primary Sitemap for the 100+ Suburb Network
 Sitemap: https://promo.intpanelshop.co.za/sitemap.xml
