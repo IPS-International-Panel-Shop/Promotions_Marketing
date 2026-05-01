@@ -22,22 +22,23 @@
         .suburb-link { border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03); transition: all 0.2s ease; font-size: 0.65rem; padding: 1rem; text-align: center; font-weight: 900; text-transform: uppercase; font-style: italic; border-radius: 0.75rem; }
         .suburb-link:hover { background: #D5FF3F; color: #000; transform: scale(1.05); }
         
+        /* Fixed Video: Multiplies white background into transparency */
         .car-flash-vid {
-            mix-blend-mode: screen; 
-            width: 33%; 
+            mix-blend-mode: multiply; 
+            width: 33.33%; 
             margin: 0 auto;
             display: block;
+            filter: brightness(1.2); /* Adjusts car vibrancy on black */
         }
     </style>
 </head>
 <body class="antialiased flex flex-col min-h-screen">
 
-    <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 p-4 md:p-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <img src="assets/ipslogo.png" alt="IPS Logo" class="h-10 md:h-14">
             <div class="flex gap-4 md:gap-8 items-center">
-                <a href="https://wa.me/27716871308" class="accent-bg text-black px-6 py-3 rounded-xl font-black text-sm md:text-lg brand-font transition-transform hover:scale-105 uppercase tracking-tighter">Whatsapp Quote</a>
+                <a href="https://wa.me/27716871308" class="accent-bg text-black px-6 py-3 rounded-xl font-black text-sm md:text-lg brand-font transition-transform hover:scale-105 uppercase">Whatsapp Quote</a>
             </div>
         </div>
     </nav>
@@ -55,7 +56,7 @@
                 <div class="space-y-4">
                     <h2 class="text-2xl md:text-4xl brand-font uppercase italic tracking-tighter">Where Quality Meets Affordability</h2>
                     <p class="text-lg md:text-2xl text-slate-300 font-medium max-w-2xl mx-auto lg:mx-0 leading-snug">
-                        International Panel Shop has more than 20yrs experience in the industry of auto body repairs, with many satisfied customers. Since 2003, we have provided precision for private and insurance clients alike. We are just one click away for a free quote to repair your car.
+                        International Panel Shop has more than 20yrs experience in the industry of auto body repairs, with many satisfied customers. From private to insurance quotes, we just one click away for a free quote to repair your car.
                     </p>
                 </div>
 
@@ -74,18 +75,18 @@
 
             <!-- SEPARATED CONTAINERS FOR SERVICES -->
             <div class="lg:col-span-5 space-y-6">
-                <!-- CONTAINER 1: IN-HOUSE SURE DRIVE -->
+                <!-- SURE DRIVE -->
                 <div class="glass-card p-8 rounded-[2.5rem] border-l-4 border-[#D5FF3F]">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="assets/suredrive.jpg" alt="Sure Drive" class="w-14 h-14 rounded object-cover border border-[#D5FF3F]">
                         <h3 class="accent-text brand-font text-2xl uppercase tracking-tighter italic leading-none">Sure Drive Rewards</h3>
                     </div>
                     <p class="text-sm font-bold text-white uppercase italic mb-3 tracking-wide">Pre-Pay Your Repairs. Protect Your Asset.</p>
-                    <p class="text-xs text-slate-400 leading-relaxed mb-6">Avoid unexpected automotive bills. Convert cash into secure <span class="text-white">SureBucks</span>, lock in repair quality, and drive stress-free.</p>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-6">Avoid unexpected automotive bills. Convert cash into secure SureBucks, lock in repair quality, and drive stress-free.</p>
                     <a href="https://sure-drive-9a8c9.web.app/" class="inline-block accent-bg text-black px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest hover:brightness-110 transition-all">Buy SureBucks</a>
                 </div>
 
-                <!-- CONTAINER 2: PAYFAST FINANCING -->
+                <!-- PAYFAST -->
                 <div class="glass-card p-8 rounded-[2.5rem]">
                     <h3 class="text-2xl mb-6 text-white uppercase brand-font italic leading-none tracking-widest">Finance Repairs</h3>
                     <p class="text-xs text-slate-500 uppercase tracking-widest mb-6">Payments Secured via PayFast</p>
@@ -93,12 +94,12 @@
                         <img src="assets/mobicred.webp" alt="Mobicred" class="h-8 w-auto">
                         <img src="assets/rcs.png" alt="RCS" class="h-10 w-auto">
                     </div>
-                    <p class="text-xs text-slate-400 italic">Get your repairs done now and pay on a flexible monthly credit plan.</p>
+                    <p class="text-xs text-slate-400 italic">Pay on a flexible monthly credit plan.</p>
                 </div>
             </div>
         </div>
 
-        <!-- CAR FLASH VIDEO BREAK -->
+        <!-- REPOSITIONED CAR FLASH (Fixed background) -->
         <section class="mb-12 w-full">
             <video autoplay loop muted playsinline class="car-flash-vid">
                 <source src="assets/car_flash.mp4" type="video/mp4">
@@ -134,22 +135,22 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center lg:text-left">
                 <div class="glass-card p-8 rounded-2xl hover:border-[#D5FF3F]/50 transition-all">
                     <h4 class="brand-font accent-text text-2xl uppercase mb-4">Structural Repair</h4>
-                    <p class="text-slate-400 text-sm italic font-bold">Chassis alignment and heavy panel work using factory-approved techniques to ensure safety and value retention for your vehicle.</p>
+                    <p class="text-slate-400 text-sm italic font-bold">Chassis alignment and heavy panel work using factory-approved techniques.</p>
                 </div>
                 <div class="glass-card p-8 rounded-2xl border-b-4 border-[#D5FF3F]">
-                    <h4 class="brand-font accent-text text-2xl uppercase mb-4">Oven Spraywork</h4>
-                    <p class="text-slate-100 text-sm italic font-bold">Showroom finish quality. We use computerized color matching and dust-free baking ovens for a showroom-perfect result.</p>
+                    <h4 class="brand-font accent-text text-2xl uppercase mb-4">VIP Collection</h4>
+                    <p class="text-slate-100 text-sm italic font-bold">Pick-up and delivery after repairs across the Cape.</p>
                 </div>
                 <div class="glass-card p-8 rounded-2xl">
-                    <h4 class="brand-font accent-text text-2xl uppercase mb-4">Dent Restoration</h4>
-                    <p class="text-slate-400 text-sm italic font-bold">Rapid minor damage repair. Minor dings, scratches, and urban damage are restored with precision and rapid turnaround times.</p>
+                    <h4 class="brand-font accent-text text-2xl uppercase mb-4">Refinishing</h4>
+                    <p class="text-slate-400 text-sm italic font-bold">Computerized color matching and dust-free baking ovens.</p>
                 </div>
             </div>
         </section>
 
-        <!-- FULL SUBURB DIRECTORY -->
+        <!-- SUBURB DIRECTORY -->
         <section class="mb-32 p-8 md:p-12 glass-card rounded-[3rem]">
-            <h2 class="text-3xl md:text-5xl mb-12 brand-font uppercase tracking-widest accent-text text-center">Service Map</h2>
+            <h2 class="text-3xl md:text-5xl mb-12 brand-font uppercase tracking-widest accent-text text-center text-tighter">Service Map</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
                 <a href="cape-town.html" class="suburb-link">Cape Town</a>
                 <a href="goodwood.html" class="suburb-link">Goodwood</a>
@@ -259,7 +260,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-black py-20 px-8 border-t border-white/10 text-center uppercase font-bold italic">
         <img src="assets/ipslogo.png" alt="IPS" class="h-12 md:h-16 mx-auto mb-6 opacity-80">
         <div class="mb-12">
