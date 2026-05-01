@@ -1,9 +1,8 @@
 import os
 import shutil
-import random
 from datetime import datetime
 
-# 1. THE ELITE 100-SUBURB LIST
+# 1. THE ELITE 100-SUBURB LIST (Safety & High-Value Verified)
 suburbs = [
     "Cape Town", "Goodwood", "Durbanville", "Milnerton", "Sunningdale", "Table View", "Bellville", "Gardens", 
     "Sea Point", "Green Point", "Atlantic Seaboard", "Stellenbosch", "Hout Bay", "Fresnaye", "CBD", 
@@ -11,9 +10,9 @@ suburbs = [
     "Panorama", "Canal Walk", "N1 City", "Century City", "Blouberg", "Blauwberg", "Melkbostrand", 
     "Bishops Court", "Constantia", "Northern Suburbs", "Claremont", "Newlands", "Rondebosch", 
     "Kenilworth", "Muizenberg", "Waterfront", "Table Bay Mall", "Eden on the Bay", "West Coast Village",
-    "Franschhoek", "Paarl", "Val de Vie", "Klapmuts", "De Zalze", "Welgemoed", "Loevenstein", 
+    "Franschhoek", "Wellington", "Val de Vie", "Klapmuts", "De Zalze", "Welgemoed", "Loevenstein", 
     "Kanonberg", "Vygeboom", "Everglen", "Door de Kraal", "Oude Westhof", "Baronetcy Estate", "Plattekloof",
-    "Strand", "Gordons Bay", "Heldervue", "Tokai", "Bergvliet", 
+    "Strand", "Gordons Bay", "Erinvale", "Spanish Farm", "Heldervue", "Tokai", "Bergvliet", 
     "Kirstenhof", "Lakeside", "Noordhoek", "Kommetjie", "Simon's Town", "Kalk Bay", "Fish Hoek", 
     "Durbanville Hills", "Eversdal", "Protea Valley", "Kenridge", "Stellenberg", "Amanda Glen", 
     "Van Riebeeckstrand", "Atlantic Beach", "Sunset Beach", "Big Bay", "West Beach", "Parklands North",
@@ -49,8 +48,6 @@ template = """
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPS Auto Body Repair | Panelbeater near me in {suburb}</title>
     
-    <link rel="canonical" href="https://intpanelshop.co.za/" />
-    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6Z3VMB0ND"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-C6Z3VMB0ND');</script>
 
@@ -60,18 +57,9 @@ template = """
     {{
       "@context": "https://schema.org",
       "@type": "AutoBodyShop",
-      "name": "International Panel Shop - {suburb}",
+      "name": "International Panel Shop",
       "description": "Premium vehicle refinishing and panelbeating for {suburb}",
       "areaServed": "{suburb}",
-      "parentOrganization": {{
-        "@type": "Organization",
-        "name": "International Panel Shop",
-        "url": "https://intpanelshop.co.za"
-      }},
-      "sameAs": [
-        "https://intpanelshop.co.za",
-        "https://github.com/IPS-International-Panel-Shop/Promotions_Marketing"
-      ],
       "address": {{
         "@type": "PostalAddress",
         "streetAddress": "7 Bloem Street, Townsend Estate",
@@ -79,12 +67,7 @@ template = """
         "addressRegion": "Western Cape",
         "addressCountry": "ZA"
       }},
-      "telephone": "+27218018007",
-      "aggregateRating": {{
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "213"
-      }}
+      "telephone": "+27218018007"
     }}
     </script>
 
@@ -96,72 +79,69 @@ template = """
         body {{ font-family: 'Avenir LT Std', sans-serif !important; font-size: 1.25rem; }}
         .accent-text {{ color: #D5FF3F; }}
         .accent-bg {{ background-color: #D5FF3F; }}
-        .glass-card {{ background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }}
+        .embedsocial-widget {{ margin: 0 auto !important; max-width: 800px !important; }}
     </style>
 </head>
-<body class="bg-black text-white antialiased flex flex-grow flex-col min-h-screen">
-    <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10 p-5">
+<body class="bg-black text-white antialiased">
+    <nav class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 p-5">
         <div class="max-w-7xl mx-auto flex justify-between items-center uppercase">
             <img src="assets/ipslogo.png" alt="IPS Logo" class="h-10 md:h-16">
-            <div class="hidden md:flex gap-8 items-center">
-                <a href="https://intpanelshop.co.za" class="text-white hover:text-[#D5FF3F] font-bold transition-colors">Main Site</a>
-                <a href="tel:+27218018007" class="accent-text font-black text-xl tracking-tighter brand-font">021 801 8007</a>
-            </div>
+            <a href="tel:+27218018007" class="accent-text font-black text-xl tracking-tighter brand-font">021 801 8007</a>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 md:px-10 py-16 flex-grow">
-        <div class="grid lg:grid-cols-12 gap-12 items-start mb-32">
-            <div class="lg:col-span-8 space-y-8">
-                <span class="inline-block px-4 py-1 accent-bg text-black font-black text-sm uppercase rounded-sm tracking-widest">Verified {suburb} Service</span>
+    <main class="max-w-7xl mx-auto px-6 md:px-10 py-16">
+        <div id="snap-zone" class="grid lg:grid-cols-12 gap-12 items-start mb-32 bg-black">
+            <div class="lg:col-span-8 space-y-8 text-left">
+                <span class="inline-block px-4 py-1 accent-bg text-black font-black text-sm uppercase rounded-sm tracking-widest">Serving {suburb}</span>
                 <h1 class="text-4xl md:text-6xl lg:text-[5rem] leading-[0.9] tracking-[-0.05em] uppercase brand-font font-black">
-                    INTERNATIONAL<br><span class="accent-text">PANEL SHOP</span>
+                    INTERNATIONAL<br><span class="accent-text font-black">PANEL SHOP</span>
                 </h1>
-                <p class="text-2xl text-slate-200 font-medium max-w-2xl">Expert panel beating and factory spray painting for clients in {suburb}.</p>
-                
-                <div class="p-8 rounded-3xl glass-card border-l-4 border-[#D5FF3F]">
-                    <h4 class="text-[#D5FF3F] text-xl font-bold uppercase mb-2">Sure Drive Rewards</h4>
-                    <p class="text-slate-300 text-lg">Pre-Pay Your Repairs. Protect Your Asset. Avoid unexpected bills by converting cash into secure SureBucks.</p>
+                <div class="space-y-6 text-xl md:text-2xl text-slate-200 font-medium max-w-2xl leading-snug">
+                    <p>Professional auto body repairs and factory-grade spray painting for the {suburb} area.</p>
+                    <p class="border-l-8 border-[#D5FF3F] pl-6 italic text-lg md:text-xl text-slate-400">
+                        <strong>The VIP Experience:</strong> Free Collection and Drop-off for our {suburb} clients. We handle the logistics while you focus on your day.
+                    </p>
                 </div>
-                
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="https://wa.me/27716871308" class="accent-bg text-black px-10 py-5 rounded-2xl font-black text-2xl hover:scale-105 transition-all">WhatsApp Quote</a>
-                    <a href="https://intpanelshop.co.za" class="border border-white/20 px-10 py-5 rounded-2xl font-black text-2xl hover:bg-white/10 transition-all">Visit Main Site</a>
-                </div>
+                <div class="pt-4"><a href="https://wa.me/27716871308" class="inline-block accent-bg text-black px-12 py-7 rounded-2xl font-black text-3xl hover:scale-105 transition-all">WhatsApp Quote</a></div>
             </div>
             
-            <div class="lg:col-span-4 glass-card p-10 rounded-[2.5rem] shadow-2xl">
-                 <div class="mb-8 p-4 bg-white/5 rounded-xl border border-white/10 text-center">
-                    <!-- Placeholder for Sure Drive Logo -->
-                    <div class="w-full aspect-video bg-zinc-900 rounded-lg flex items-center justify-center italic text-zinc-700">Sure Drive Logo</div>
-                </div>
-                <h3 class="text-3xl mb-4 accent-text uppercase brand-font italic">Drive Now Pay Later</h3>
-                <p class="text-slate-400 mb-8 italic">Finance repairs via Mobicred or RCS Cards.</p>
-                <div class="flex gap-6 opacity-80">
-                    <img src="assets/mobicred.webp" class="h-8 w-auto">
-                    <img src="assets/rcs.png" class="h-8 w-auto">
+            <div class="lg:col-span-4 bg-[#111827]/80 border border-white/10 p-12 rounded-[2rem] shadow-2xl backdrop-blur-sm">
+                <h3 class="text-4xl mb-8 accent-text uppercase italic tracking-tighter brand-font leading-none">DRIVE NOW<br>PAY LATER</h3>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed font-bold italic uppercase">Secure financing via <strong>Mobicred</strong> and <strong>RCS Cards</strong>.</p>
+                <div class="space-y-8">
+                    <img src="assets/mobicred.webp" alt="Mobicred" class="h-10 w-auto object-contain">
+                    <img src="assets/rcs.png" alt="RCS" class="h-12 w-auto object-contain">
                 </div>
             </div>
         </div>
 
+        <div class="mb-32 text-center">
+            <h3 class="text-[#D5FF3F] uppercase font-black tracking-widest text-xs mb-8">Live Feedback (4.8 Stars)</h3>
+            <div class="embedsocial-widget w-full" data-ref="e26c4526b8173a0c8c5955ccabcc2458"></div>
+            <script>(function(d, s, id) {{ var js; if (d.getElementById(id)) {{return;}} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/aht.js"; d.getElementsByTagName("head")[0].appendChild(js); }}(document, "script", "EmbedSocialWidgetScript"));</script>
+        </div>
+
         <section class="mb-32">
-            <h2 class="text-4xl md:text-5xl mb-12 uppercase italic accent-text brand-font">Professional Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{services_list_html}</div>
+            <h2 class="text-4xl md:text-6xl mb-16 uppercase italic tracking-[0.2em] accent-text brand-font">Services in {suburb}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 uppercase font-bold italic">{services_list_html}</div>
         </section>
 
-        <section class="mb-32 p-12 glass-card rounded-[3rem] text-center">
-            <h2 class="text-3xl md:text-5xl mb-8 brand-font uppercase">Nearby Areas</h2>
-            <div class="flex flex-wrap justify-center gap-4 text-slate-500 font-bold uppercase italic text-sm">
-                {nearby_links}
+        <section class="mb-32 text-center uppercase font-bold italic">
+            <h2 class="text-4xl md:text-6xl mb-16 brand-font tracking-[0.2em]">Precision Workmanship</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="group space-y-4"><img src="assets/audi-before.jpg" class="rounded-2xl grayscale group-hover:grayscale-0 transition-all"><img src="assets/audi-after.jpg" class="rounded-2xl border-4 border-[#D5FF3F]"><p>Audi Refinishing</p></div>
+                <div class="group space-y-4"><img src="assets/bmw-before.jpg" class="rounded-2xl grayscale group-hover:grayscale-0 transition-all"><img src="assets/bmw-after.jpeg" class="rounded-2xl border-4 border-[#D5FF3F]"><p>BMW Structural</p></div>
+                <div class="group space-y-4"><img src="assets/merc-before.jpg" class="rounded-2xl grayscale group-hover:grayscale-0 transition-all"><img src="assets/merc after.jpg" class="rounded-2xl border-4 border-[#D5FF3F]"><p>Mercedes Refinishing</p></div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-zinc-950 py-20 px-8 border-t border-white/5 text-center">
-        <img src="assets/ipslogo.png" class="h-12 mx-auto mb-6 opacity-50">
-        <p class="text-xl text-slate-500 font-bold mb-4 brand-font">7 Bloem Street, Goodwood</p>
-        <p class="text-zinc-800 text-xs tracking-widest uppercase">Built by <a href="https://forgevertical.com" class="hover:text-[#D5FF3F]">forgevertical.com</a></p>
-        <p class="text-zinc-800 text-[10px] mt-4">© 2026 IPS // {suburb}</p>
+    <footer class="bg-black py-24 px-8 border-t border-white/10 text-center uppercase font-bold italic">
+        <img src="assets/ipslogo.png" alt="IPS" class="h-16 mx-auto mb-6">
+        <img src="assets/google.webp" alt="4.8 Google Reviews" class="h-20 mx-auto mb-10 opacity-90">
+        <p class="text-2xl text-white font-black brand-font tracking-widest">7 Bloem Street, Townsend Estate, Goodwood</p>
+        <p class="text-slate-700 text-sm mt-12 opacity-50">© 2026 IPS // {suburb}</p>
     </footer>
 </body>
 </html>
@@ -173,23 +153,14 @@ os.makedirs("dist")
 
 for s in suburbs:
     page_name = s.lower().replace(" ", "-") + ".html"
-    
-    # Dynamic Nearby Links
-    nearby = random.sample([x for x in suburbs if x != s], 8)
-    nearby_links = " • ".join([f'<a href="{n.lower().replace(" ", "-")}.html" class="hover:text-[#D5FF3F]">{n}</a>' for n in nearby])
-    
     with open(os.path.join("dist", page_name), "w", encoding="utf-8") as f:
-        f.write(template.format(
-            suburb=s, 
-            services_list_html=services_list_html, 
-            nearby_links=nearby_links
-        ))
+        f.write(template.format(suburb=s, services_list_html=services_list_html, page_name=page_name))
 
 # 4. SITEMAP
-with open("dist/sitemap.xml", "w") as f:
+with open("sitemap.xml", "w") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
     for s in suburbs:
         f.write(f'<url><loc>https://promo.intpanelshop.co.za/{s.lower().replace(" ", "-")}.html</loc></url>')
     f.write('</urlset>')
 
-print(f"✅ Success: Factory logic updated with Sure Drive and Main Site cross-referencing.")
+print(f"✅ Success: 100 Safe Suburb Pages Created with restored Gallery, Reviews, and Footer assets.")
