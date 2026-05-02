@@ -3,137 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repair Finance & Credit | International Panel Shop Western Cape</title>
-    <meta name="description" content="Get credit for your vehicle repairs at International Panel Shop. Use Mobicred or RCS to pay for panelbeating and spray painting in monthly installments. Fast approval.">
+    <title>Secure Repair Credit | IPS Auto Body & Sure Drive System</title>
+    <meta name="description" content="Access credit for auto body repairs via PayFast. International Panel Shop offers Mobicred & RCS credit options integrated with the Sure Drive collection system.">
     
-    <!-- Financial & Local Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FinancialService",
-      "name": "IPS Repair Finance",
-      "parentOrganization": {
-        "@type": "AutoBodyShop",
-        "name": "International Panel Shop"
-      },
-      "description": "Flexible credit options for auto body repairs using Mobicred and RCS.",
-      "feesAndCommissionsSpecification": "Terms and conditions apply per credit provider.",
-      "areaServed": "Western Cape",
-      "telephone": "+27218018007"
-    }
-    </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --lime: #D5FF3F;
-            --corporate-bg: #1a1c1e; /* Not pure black - Bank/Insurance feel */
-            --glass: rgba(255, 255, 255, 0.03);
+            --slate-bank: #121416;
+            --slate-light: #1c1f22;
         }
-        body { font-family: 'Barlow', sans-serif; background-color: var(--corporate-bg); color: #e2e8f0; }
+        body { font-family: 'Barlow', sans-serif; background-color: var(--slate-bank); color: #e2e8f0; overflow-x: hidden; }
         .brand-font { font-family: 'Barlow Condensed', sans-serif; }
-        .hero-gradient { background: linear-gradient(180deg, #25282c 0%, #1a1c1e 100%); }
-        .accent-text { color: var(--lime); }
-        .card-shadow { box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        
+        .hero-section {
+            background: linear-gradient(rgba(18, 20, 22, 0.7), rgba(18, 20, 22, 0.9)), 
+                        url('assets/workshop-hero.jpg'); /* Suggest high-res repair bay image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .credit-card {
+            background: var(--slate-light);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .suredrive-panel {
+            background-color: var(--lime);
+            color: #000;
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        }
+
+        .btn-main {
+            background: transparent;
+            border: 1px solid rgba(213, 255, 63, 0.3);
+            color: var(--lime);
+            transition: all 0.2s;
+        }
+        .btn-main:hover { background: var(--lime); color: #000; }
+
+        .ts-cs { font-size: 0.65rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Simple Nav -->
-    <nav class="border-b border-white/5 py-6 px-8 bg-[#25282c]">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html"><img src="assets/ipslogo.png" alt="IPS" class="h-10"></a>
-            <a href="https://wa.me/27716871308" class="text-sm font-bold uppercase tracking-widest accent-text hover:underline">Support: 071 687 1308</a>
+    <!-- Top Navigation -->
+    <nav class="py-6 px-8 flex justify-between items-center border-b border-white/5 bg-black/20 backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center gap-6">
+            <img src="assets/ipslogo.png" alt="IPS Logo" class="h-8 md:h-10">
+            <div class="h-6 w-[1px] bg-white/20 hidden md:block"></div>
+            <img src="assets/suredrive-logo.png" alt="Sure Drive Logo" class="h-6 md:h-8">
         </div>
+        <a href="https://www.intpanelshop.co.za" class="btn-main px-6 py-2 rounded-lg text-sm font-bold uppercase tracking-widest">Visit Main Site</a>
     </nav>
 
-    <!-- Hero Header -->
-    <header class="hero-gradient py-20 px-6 text-center border-b border-white/5">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="brand-font text-6xl md:text-8xl font-black uppercase leading-none mb-6">Drive Now. <br><span class="accent-text italic">Pay Monthly.</span></h1>
-            <p class="text-xl text-slate-400 max-w-2xl mx-auto">International Panel Shop is proud to be the Western Cape's leader in repair finance. Don't let a collision stall your life—get instant credit and professional restoration.</p>
+    <!-- Hero -->
+    <header class="hero-section py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h1 class="brand-font text-7xl md:text-9xl font-black uppercase leading-[0.85] italic tracking-tighter">
+                    CREDIT FOR <br><span class="accent-text text-white">YOUR CAR.</span>
+                </h1>
+                <p class="text-xl text-slate-300 max-w-lg leading-relaxed">
+                    International Panel Shop provides a secure, 100% digital credit gateway via <strong class="text-white">PayFast</strong>. No card machines, no friction—just factory-grade restoration.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://wa.me/27716871308?text=I+need+a+PayFast+credit+link" class="bg-[#D5FF3F] text-black font-black brand-font text-2xl px-8 py-4 rounded-xl uppercase italic hover:scale-105 transition-all">Request Payment Link</a>
+                </div>
+            </div>
+            <div class="hidden lg:block relative">
+                <img src="assets/car-restored-credit.png" alt="Restored Luxury Vehicle" class="rounded-3xl shadow-2xl border border-white/10">
+                <div class="absolute -bottom-6 -left-6 bg-black/80 backdrop-blur-xl p-6 rounded-2xl border border-lime/30">
+                    <p class="brand-font text-3xl font-black accent-text uppercase italic">Verified PayFast Gateway</p>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto py-20 px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-start">
+    <main class="max-w-7xl mx-auto py-24 px-6">
+        <div class="grid lg:grid-cols-12 gap-16">
             
-            <!-- LEFT: Financial Providers -->
-            <div class="space-y-12">
-                <div>
-                    <h2 class="brand-font text-4xl font-black uppercase mb-8 border-l-4 accent-border pl-6">Finance Partners</h2>
-                    <div class="space-y-6">
-                        <!-- Mobicred -->
-                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10 card-shadow">
-                            <img src="assets/mobicred.webp" alt="Mobicred" class="h-10 mb-6">
-                            <h3 class="text-2xl font-bold mb-4">Mobicred Online Credit</h3>
-                            <ul class="space-y-3 text-slate-400 mb-8">
-                                <li class="flex items-center gap-2"><svg class="accent-text" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Apply online in minutes</li>
-                                <li class="flex items-center gap-2"><svg class="accent-text" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Instant decision on your limit</li>
-                                <li class="flex items-center gap-2"><svg class="accent-text" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Pay monthly via debit order</li>
+            <!-- LEFT: PAYFAST CREDIT PORTAL -->
+            <div class="lg:col-span-7 space-y-12">
+                <section>
+                    <p class="text-lime font-bold uppercase tracking-widest text-sm mb-4">Digital Payment Gateway</p>
+                    <h2 class="brand-font text-5xl font-black uppercase mb-8">SECURE CREDIT OPTIONS</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Mobicred via PayFast -->
+                        <div class="credit-card p-8 rounded-3xl">
+                            <img src="assets/payfast-mobicred.png" alt="Mobicred via PayFast" class="h-10 mb-8 opacity-90">
+                            <h3 class="text-2xl font-bold mb-2">Mobicred Finance</h3>
+                            <p class="text-slate-400 text-sm mb-6">Complete your auto body repair on monthly installments. Integrated via our secure PayFast link.</p>
+                            <ul class="space-y-3 text-sm font-medium">
+                                <li class="flex items-center gap-3">✓ Apply online in minutes</li>
+                                <li class="flex items-center gap-3">✓ Instant decision by Mobicred</li>
+                                <li class="flex items-center gap-3">✓ Use it for any IPS repair</li>
                             </ul>
-                            <a href="https://mobicred.co.za" target="_blank" class="block text-center py-4 bg-white/10 hover:bg-white/20 rounded-xl font-bold transition-all">Apply for Mobicred</a>
                         </div>
 
-                        <!-- RCS -->
-                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10 card-shadow">
-                            <img src="assets/rcs.png" alt="RCS" class="h-12 mb-6">
-                            <h3 class="text-2xl font-bold mb-4">RCS Card Payments</h3>
-                            <p class="text-slate-400 mb-6">Use your existing RCS card to settle your repair bill. We accept all RCS network cards including Game, Makro, and Builder's.</p>
-                            <a href="https://wa.me/27716871308?text=I+want+to+pay+via+RCS+Card" class="block text-center py-4 bg-white/10 hover:bg-white/20 rounded-xl font-bold transition-all">Enquire about RCS</a>
+                        <!-- RCS via PayFast -->
+                        <div class="credit-card p-8 rounded-3xl">
+                            <img src="assets/rcs-payfast.png" alt="RCS via PayFast" class="h-10 mb-8 opacity-90">
+                            <h3 class="text-2xl font-bold mb-2">RCS Store Cards</h3>
+                            <p class="text-slate-400 text-sm mb-6">We accept all major store cards in the RCS network via our digital gateway. No physical card present required.</p>
+                            <ul class="space-y-3 text-sm font-medium">
+                                <li class="flex items-center gap-3">✓ Use Game/Makro/Builders Cards</li>
+                                <li class="flex items-center gap-3">✓ 100% Paperless Transaction</li>
+                                <li class="flex items-center gap-3">✓ Secure Digital Link</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
+
+                    <div class="mt-12 bg-white/5 border border-white/10 p-6 rounded-2xl flex items-center gap-6">
+                        <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center italic font-black text-lime">!</div>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            <strong class="text-white uppercase tracking-tight">No Card Machine:</strong> For your security, we do not use physical card terminals. Upon quote approval, we generate a unique, secure payment link through <span class="text-white">PayFast</span> and send it directly to your device.
+                        </p>
+                    </div>
+                </section>
             </div>
 
-            <!-- RIGHT: Sure Drive Eco-System -->
-            <div class="space-y-12">
-                <div class="bg-[#D5FF3F] text-black p-10 rounded-3xl card-shadow relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-10">
-                        <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
-                    </div>
-                    <h2 class="brand-font text-5xl font-black uppercase mb-6 italic leading-none">THE SURE DRIVE <br>ECO-SYSTEM</h2>
-                    <p class="text-lg font-medium mb-8 leading-relaxed">Finance is only half the battle. Our Sure Drive system ensures that your journey from accident to restoration is handled with zero friction.</p>
+            <!-- RIGHT: THE SURE DRIVE SYSTEM -->
+            <div class="lg:col-span-5">
+                <aside class="suredrive-panel p-10 rounded-3xl shadow-2xl sticky top-32">
+                    <img src="assets/suredrive-logo-dark.png" alt="Sure Drive Logo" class="h-8 mb-8">
+                    <h2 class="brand-font text-5xl font-black uppercase italic leading-[0.9] mb-8">THE SURE DRIVE <br>COLLECTION ECO-SYSTEM</h2>
                     
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="h-10 w-10 shrink-0 bg-black text-lime flex items-center justify-center rounded-full font-bold">1</div>
-                            <div>
-                                <p class="font-bold uppercase tracking-tight text-xl">Digital Assessment</p>
-                                <p class="text-black/70">Send us photos via WhatsApp. We provide a breakdown for your credit application instantly.</p>
-                            </div>
+                    <div class="space-y-8">
+                        <div class="group">
+                            <p class="font-black text-2xl uppercase italic leading-none group-hover:pl-2 transition-all">01 Digital Assessment</p>
+                            <p class="text-black/70 text-sm mt-2">Send images via WhatsApp. We provide a professional repair breakdown for your credit application instantly.</p>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="h-10 w-10 shrink-0 bg-black text-lime flex items-center justify-center rounded-full font-bold">2</div>
-                            <div>
-                                <p class="font-bold uppercase tracking-tight text-xl">The Uber Collection</p>
-                                <p class="text-black/70">Once credit is approved, we Uber to your door in the Western Cape to collect your vehicle.</p>
-                            </div>
+                        <div class="group">
+                            <p class="font-black text-2xl uppercase italic leading-none group-hover:pl-2 transition-all">02 Uber Collection</p>
+                            <p class="text-black/70 text-sm mt-2">Once credit is authorized, we Uber a driver to your doorstep in the Western Cape to collect your vehicle.</p>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="h-10 w-10 shrink-0 bg-black text-lime flex items-center justify-center rounded-full font-bold">3</div>
-                            <div>
-                                <p class="font-bold uppercase tracking-tight text-xl">Industrial Restoration</p>
-                                <p class="text-black/70">Factory-grade spray painting and 20+ years of structural expertise. No compromises.</p>
-                            </div>
+                        <div class="group">
+                            <p class="font-black text-2xl uppercase italic leading-none group-hover:pl-2 transition-all">03 Factory Finish</p>
+                            <p class="text-black/70 text-sm mt-2">Your car enters the IPS factory for precision panelbeating and factory-grade spray painting.</p>
                         </div>
                     </div>
-                </div>
 
-                <div class="p-8 border border-white/10 rounded-3xl text-center">
-                    <p class="text-slate-400 mb-4 uppercase tracking-widest text-xs font-bold">Ready to restore your car?</p>
-                    <a href="https://wa.me/27716871308?text=Hi+IPS+I+need+a+finance+quote" class="inline-block bg-[#D5FF3F] text-black font-black brand-font text-3xl px-12 py-6 rounded-2xl uppercase italic hover:scale-105 transition-all">Get Your Finance Quote</a>
-                </div>
+                    <div class="mt-12 pt-8 border-t border-black/10">
+                        <p class="font-bold text-xs uppercase tracking-tighter mb-4">Vehicle Collections:</p>
+                        <p class="text-[10px] uppercase leading-tight opacity-60">
+                            FREE COLLECTION & DROP-OFF ONLY APPLIES TO REPAIRS OVER R10,000. FOR REPAIRS UNDER R10,000, A FIXED FEE OF R500 APPLIES WITHIN CAPE TOWN. T&CS APPLY.
+                        </p>
+                    </div>
+                </aside>
             </div>
         </div>
     </main>
 
+    <!-- Visual Proof / Industrial Feel -->
+    <section class="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-3 gap-6">
+        <img src="assets/repair-process-1.jpg" class="rounded-2xl grayscale hover:grayscale-0 transition-all border border-white/5" alt="Industrial Paint Booth">
+        <img src="assets/repair-process-2.jpg" class="rounded-2xl grayscale hover:grayscale-0 transition-all border border-white/5" alt="Precision Panelbeating">
+        <img src="assets/repair-process-3.jpg" class="rounded-2xl grayscale hover:grayscale-0 transition-all border border-white/5" alt="Final Quality Inspection">
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-[#111] py-12 px-6 text-center border-t border-white/5">
-        <p class="text-slate-500 text-sm">International Panel Shop (IPS) | 7 Bloem Street, Goodwood</p>
-        <p class="text-slate-600 text-xs mt-2">© 2026 Western Cape's First Choice for Quality Repairs</p>
+    <footer class="bg-black py-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="assets/ipslogo.png" class="h-8 mx-auto mb-6 opacity-50">
+            <p class="ts-cs max-w-lg mx-auto">
+                International Panel Shop (PTY) LTD is a registered repair facility. Finance is provided by external entities (Mobicred, RCS) through the PayFast gateway. All credit is subject to approval. Free Uber collection subject to repair value and location.
+            </p>
+            <div class="mt-8 flex justify-center gap-6">
+                <a href="https://www.intpanelshop.co.za" class="text-xs uppercase font-bold text-slate-500 hover:text-white transition-colors">Main Website</a>
+                <a href="index.html" class="text-xs uppercase font-bold text-slate-500 hover:text-white transition-colors">Suburb Network</a>
+            </div>
+        </div>
     </footer>
 
 </body>
