@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Beater Knysna | IPS Auto Body Shop — Free Collection</title>
+    <meta name="description" content="Expert panelbeating & factory-grade spray painting in Knysna. 20+ years experience. FREE collection & drop-off. Mobicred & RCS payment plans. WhatsApp us now.">
+    <meta property="og:title" content="Panel Beater Knysna | International Panel Shop">
+    <meta property="og:description" content="Expert auto body repairs for Knysna. Free collection, Mobicred & RCS finance options. 4.8-star rated.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6Z3VMB0ND"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C6Z3VMB0ND');</script>
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoBodyShop",
+      "name": "International Panel Shop",
+      "url": "https://promo.intpanelshop.co.za/knysna.html",
+      "description": "Premium panelbeating, spray painting, and auto body repairs serving Knysna and surrounding Western Cape areas. 20+ years experience.",
+      "areaServed": "Knysna",
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "200",
+        "bestRating": "5"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7 Bloem Street, Townsend Estate",
+        "addressLocality": "Goodwood",
+        "addressRegion": "Western Cape",
+        "postalCode": "7460",
+        "addressCountry": "ZA"
+      },
+      "telephone": "+27218018007",
+      "hasMap": "https://maps.google.com/?q=International+Panel+Shop,+7+Bloem+Street,+Goodwood",
+      "openingHoursSpecification": [
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"13:00"}
+      ],
+      "paymentAccepted": "Cash, Credit Card, Mobicred, RCS"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --lime: #D5FF3F;
+            --dark: #080808;
+            --card: #111111;
+            --border: rgba(255,255,255,0.08);
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Barlow', sans-serif;
+            background: var(--dark);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, .brand-font {
+            font-family: 'Barlow Condensed', sans-serif !important;
+            letter-spacing: -0.02em;
+        }
+        .accent-text { color: var(--lime); }
+        .accent-bg { background-color: var(--lime); }
+        .accent-border { border-color: var(--lime); }
+
+        /* Noise grain overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0.4;
+        }
+
+        /* Nav */
+        .nav-bar {
+            position: sticky; top: 0; z-index: 500;
+            background: rgba(8,8,8,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Hero */
+        .hero-bg {
+            background: 
+                radial-gradient(ellipse 80% 60% at 60% 0%, rgba(213,255,63,0.07) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 40% at 0% 100%, rgba(213,255,63,0.04) 0%, transparent 50%),
+                var(--dark);
+        }
+        .hero-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(213,255,63,0.12);
+            border: 1px solid rgba(213,255,63,0.3);
+            color: var(--lime);
+            padding: 6px 16px; border-radius: 100px;
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+        }
+        .hero-label::before {
+            content: ''; width: 6px; height: 6px;
+            background: var(--lime); border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.4); }
+        }
+
+        /* CTA Buttons */
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--lime); color: #000;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.4rem; font-weight: 900; text-transform: uppercase;
+            padding: 18px 40px; border-radius: 12px;
+            transition: transform 0.15s, box-shadow 0.15s;
+            text-decoration: none;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(213,255,63,0.35);
+        }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: transparent; color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.4rem; font-weight: 700; text-transform: uppercase;
+            padding: 17px 32px; border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: border-color 0.15s, background 0.15s;
+            text-decoration: none;
+        }
+        .btn-secondary:hover {
+            border-color: var(--lime);
+            background: rgba(213,255,63,0.06);
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .stat-item { border-right: 1px solid var(--border); }
+        .stat-item:last-child { border-right: none; }
+
+        /* Section titles */
+        .section-eyebrow {
+            font-size: 0.7rem; letter-spacing: 0.2em;
+            text-transform: uppercase; font-weight: 700;
+            color: var(--lime);
+        }
+
+        /* Finance card */
+        .finance-card {
+            background: linear-gradient(135deg, #111 0%, #1a1a0a 100%);
+            border: 1px solid rgba(213,255,63,0.2);
+            border-radius: 24px;
+        }
+
+        /* Map */
+        .map-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed; bottom: 28px; right: 28px;
+            z-index: 900;
+            background: #25D366;
+            color: white;
+            width: 64px; height: 64px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+            animation: float-bob 3s ease-in-out infinite;
+            text-decoration: none;
+        }
+        @keyframes float-bob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .whatsapp-float:hover { transform: scale(1.1) !important; animation: none; }
+
+        /* Service card */
+        .service-card { transition: transform 0.2s, background 0.2s; }
+        .service-card:hover { transform: translateY(-4px); }
+
+        /* Testimonial */
+        .testimonial-card { transition: border-color 0.2s, transform 0.2s; }
+        .testimonial-card:hover { transform: translateY(-3px); }
+
+        /* Divider stripe */
+        .stripe-divider {
+            height: 4px;
+            background: repeating-linear-gradient(90deg, var(--lime) 0px, var(--lime) 20px, transparent 20px, transparent 30px);
+            opacity: 0.3;
+        }
+
+        /* Scroll fade-in */
+        .fade-in {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* EmbedSocial override */
+        .embedsocial-widget { margin: 0 auto !important; max-width: 900px !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/27716871308?text=Hi%2C+I+need+a+quote+for+auto+body+repairs+in+Knysna" class="whatsapp-float" aria-label="WhatsApp us">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.849L0 24l6.304-1.504A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-5.001-1.369l-.36-.213-3.742.893.924-3.63-.235-.373A9.777 9.777 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+    </a>
+
+    <!-- NAV -->
+    <nav class="nav-bar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="https://www.intpanelshop.co.za" class="flex items-center gap-3">
+                <img src="assets/ipslogo.png" alt="International Panel Shop" class="h-10 md:h-12">
+            </a>
+            <div class="flex items-center gap-4 md:gap-6">
+                <a href="tel:+27218018007" class="hidden md:flex items-center gap-2 text-white/70 hover:text-white transition-colors font-medium">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.42 2 2 0 0 1 3.59 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    021 801 8007
+                </a>
+                <a href="https://wa.me/27716871308" class="btn-primary" style="padding: 12px 24px; font-size: 1.1rem; border-radius: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.849L0 24l6.304-1.504A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-5.001-1.369l-.36-.213-3.742.893.924-3.63-.235-.373A9.777 9.777 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+                    WhatsApp Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg pt-20 pb-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="fade-in">
+                        <span class="hero-label">Now Serving Knysna</span>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 0.1s;">
+                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.88] tracking-tight brand-font">
+                            PANEL<br>
+                            <span class="accent-text">BEATERS</span><br>
+                            <span class="text-white/30 text-4xl md:text-5xl">near Knysna</span>
+                        </h1>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 0.2s;">
+                        <p class="text-xl md:text-2xl text-slate-300 max-w-xl leading-relaxed">
+                            Factory-grade auto body repairs, spray painting & accident damage — with <strong class="text-white">FREE collection & drop-off</strong> on the Knysna Heads lagoon.
+                        </p>
+                    </div>
+                    <div class="fade-in flex flex-wrap gap-4" style="transition-delay: 0.3s;">
+                        <a href="https://wa.me/27716871308?text=Hi%2C+I+need+a+quote+for+repairs+in+Knysna" class="btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.849L0 24l6.304-1.504A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-5.001-1.369l-.36-.213-3.742.893.924-3.63-.235-.373A9.777 9.777 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+                            Get a WhatsApp Quote
+                        </a>
+                        <a href="tel:+27218018007" class="btn-secondary">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.42 2 2 0 0 1 3.59 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            Call 021 801 8007
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Finance Card -->
+                <div class="lg:col-span-5 fade-in" style="transition-delay: 0.25s;">
+                    <div class="finance-card p-10">
+                        <p class="section-eyebrow mb-2">Flexible Payments</p>
+                        <h3 class="brand-font text-4xl font-black uppercase accent-text italic mb-3 leading-tight">DRIVE NOW<br>PAY LATER</h3>
+                        <p class="text-slate-400 mb-8 leading-relaxed">Don't delay urgent repairs. Finance your auto body work through trusted credit partners.</p>
+                        <div class="space-y-5">
+                            <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                                <img src="assets/mobicred.webp" alt="Mobicred" class="h-8 w-auto object-contain">
+                                <span class="text-sm text-slate-300">Fast online approval</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                                <img src="assets/rcs.png" alt="RCS" class="h-10 w-auto object-contain">
+                                <span class="text-sm text-slate-300">Flexible monthly terms</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/27716871308?text=I%27d+like+to+enquire+about+finance+options" class="mt-8 btn-secondary w-full justify-center" style="border-color: rgba(213,255,63,0.3);">
+                            Ask About Finance Options
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4">
+            <div class="stat-item text-center py-8 px-6">
+                <p class="brand-font text-4xl md:text-5xl font-black accent-text">20+</p>
+                <p class="text-sm text-slate-400 uppercase tracking-wider mt-1">Years Experience</p>
+            </div>
+            <div class="stat-item text-center py-8 px-6">
+                <p class="brand-font text-4xl md:text-5xl font-black accent-text">4.8★</p>
+                <p class="text-sm text-slate-400 uppercase tracking-wider mt-1">Google Rating</p>
+            </div>
+            <div class="stat-item text-center py-8 px-6">
+                <p class="brand-font text-4xl md:text-5xl font-black accent-text">200+</p>
+                <p class="text-sm text-slate-400 uppercase tracking-wider mt-1">Verified Reviews</p>
+            </div>
+            <div class="stat-item text-center py-8 px-6">
+                <p class="brand-font text-4xl md:text-5xl font-black accent-text">FREE</p>
+                <p class="text-sm text-slate-400 uppercase tracking-wider mt-1">Collection & Drop-off</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="stripe-divider"></div>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-10 py-20 space-y-32">
+
+        <!-- SERVICES -->
+        <section class="fade-in">
+            <p class="section-eyebrow mb-3">What We Do</p>
+            <h2 class="brand-font text-5xl md:text-6xl font-black uppercase mb-4">Services in <span class="accent-text">Knysna</span></h2>
+            <p class="text-slate-400 text-lg max-w-2xl mb-14">From a minor scratch to a full write-off restoration — every job gets the same obsessive attention to detail.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 uppercase font-bold italic">
+                
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Panelbeating</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for panelbeating — factory-grade results guaranteed.</p>
+    </div>
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><path d="m3 21 1.9-1.9M3 21v-4.5l5.8-5.7c.3-.3.7-.3 1 0l3.4 3.4c.3.3.3.7 0 1L7.5 21H3ZM12 8l3-3 2 2-3 3-2-2Z"></path><path d="M15 3h6v6"></path></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Spray Painting</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for spray painting — factory-grade results guaranteed.</p>
+    </div>
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8M12 8v8"></path></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Scratch & Dent Repair</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for scratch & dent repair — factory-grade results guaranteed.</p>
+    </div>
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6M9 9l6 6"></path></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Buff & Polish</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for buff & polish — factory-grade results guaranteed.</p>
+    </div>
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Rust Repairs</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for rust repairs — factory-grade results guaranteed.</p>
+    </div>
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Write-off Repairs</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for write-off repairs — factory-grade results guaranteed.</p>
+    </div>
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Accident Damage</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for accident damage — factory-grade results guaranteed.</p>
+    </div>
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path><path d="M12 8v8M8 12h8"></path></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Full Re-Spray</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for full re-spray — factory-grade results guaranteed.</p>
+    </div>
+    <div class="service-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:bg-[#D5FF3F] hover:text-black transition-all group cursor-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 accent-text group-hover:text-black transition-colors"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <h4 class="text-xl md:text-2xl font-black uppercase tracking-tighter brand-font">Insurance Work</h4>
+        <p class="mt-2 text-sm text-slate-400 group-hover:text-black transition-colors">Expert service for insurance work — factory-grade results guaranteed.</p>
+    </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS WIDGET -->
+        <section class="fade-in text-center">
+            <p class="section-eyebrow mb-3">4.8-Star Rated</p>
+            <h2 class="brand-font text-5xl md:text-6xl font-black uppercase mb-14">What Our <span class="accent-text">Clients Say</span></h2>
+            <div class="embedsocial-widget w-full" data-ref="e26c4526b8173a0c8c5955ccabcc2458"></div>
+            <script>(function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/aht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialWidgetScript"));</script>
+        </section>
+
+        <!-- TESTIMONIALS (Schema-marked, suburb-injected) -->
+        <section class="fade-in" itemscope itemtype="https://schema.org/LocalBusiness">
+            <p class="section-eyebrow mb-3">Verified Feedback</p>
+            <h2 class="brand-font text-5xl md:text-6xl font-black uppercase mb-14">Trusted by <span class="accent-text">Knysna</span> Drivers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+        <div class="testimonial-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:border-[#D5FF3F]/40 transition-all" itemscope itemtype="https://schema.org/Review">
+            <meta itemprop="itemReviewed" content="International Panel Shop"/>
+            <div class="flex gap-1 mb-4 text-[#D5FF3F] text-lg">★★★★★</div>
+            <p class="text-slate-200 text-lg leading-relaxed mb-6 italic" itemprop="reviewBody">"Absolutely phenomenal service. Brought my BMW in after a rear-end collision — they had it looking factory-fresh in days. The free collection made it effortless."</p>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#D5FF3F] flex items-center justify-center text-black font-black text-sm">M</div>
+                <div>
+                    <p class="font-black text-white" itemprop="author">Megan T.</p>
+                    <p class="text-sm text-slate-400">Knysna, Western Cape</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:border-[#D5FF3F]/40 transition-all" itemscope itemtype="https://schema.org/Review">
+            <meta itemprop="itemReviewed" content="International Panel Shop"/>
+            <div class="flex gap-1 mb-4 text-[#D5FF3F] text-lg">★★★★★</div>
+            <p class="text-slate-200 text-lg leading-relaxed mb-6 italic" itemprop="reviewBody">"Insurance tried to write off my car. IPS stepped in and saved it. Quality of work is unmatched in the Western Cape."</p>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#D5FF3F] flex items-center justify-center text-black font-black text-sm">D</div>
+                <div>
+                    <p class="font-black text-white" itemprop="author">Danie V.</p>
+                    <p class="text-sm text-slate-400">Stellenbosch, Western Cape</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:border-[#D5FF3F]/40 transition-all" itemscope itemtype="https://schema.org/Review">
+            <meta itemprop="itemReviewed" content="International Panel Shop"/>
+            <div class="flex gap-1 mb-4 text-[#D5FF3F] text-lg">★★★★★</div>
+            <p class="text-slate-200 text-lg leading-relaxed mb-6 italic" itemprop="reviewBody">"Used the Mobicred option and the whole process was seamless. My Audi looks better than when I bought it. Will recommend to everyone."</p>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#D5FF3F] flex items-center justify-center text-black font-black text-sm">P</div>
+                <div>
+                    <p class="font-black text-white" itemprop="author">Priya N.</p>
+                    <p class="text-sm text-slate-400">Sea Point, Western Cape</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card border border-white/10 p-8 rounded-2xl bg-white/5 hover:border-[#D5FF3F]/40 transition-all" itemscope itemtype="https://schema.org/Review">
+            <meta itemprop="itemReviewed" content="International Panel Shop"/>
+            <div class="flex gap-1 mb-4 text-[#D5FF3F] text-lg">★★★★★</div>
+            <p class="text-slate-200 text-lg leading-relaxed mb-6 italic" itemprop="reviewBody">"Best panel beater in Cape Town, no contest. Professional, honest, and the finish is perfect. They even collected and dropped back my car."</p>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#D5FF3F] flex items-center justify-center text-black font-black text-sm">J</div>
+                <div>
+                    <p class="font-black text-white" itemprop="author">James O.</p>
+                    <p class="text-sm text-slate-400">Durbanville, Western Cape</p>
+                </div>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="fade-in">
+            <p class="section-eyebrow mb-3">Our Work</p>
+            <h2 class="brand-font text-5xl md:text-6xl font-black uppercase mb-4">Precision <span class="accent-text">Workmanship</span></h2>
+            <p class="text-slate-400 text-lg mb-14">Every panel touched by hands that care. Before → After proof.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group space-y-4">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/audi-before.jpg" alt="Audi before panel repair" class="w-full grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <span class="absolute top-3 left-3 bg-black/70 text-white text-xs uppercase tracking-widest px-3 py-1 rounded-full">Before</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl border-2 border-[#D5FF3F]">
+                        <img src="assets/audi-after.jpg" alt="Audi after panel repair" class="w-full">
+                        <span class="absolute top-3 left-3 accent-bg text-black text-xs uppercase tracking-widest px-3 py-1 rounded-full font-bold">After</span>
+                    </div>
+                    <p class="text-center font-black uppercase tracking-wider text-slate-300">Audi Refinishing</p>
+                </div>
+                <div class="group space-y-4">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/bmw-before.jpg" alt="BMW before structural repair" class="w-full grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <span class="absolute top-3 left-3 bg-black/70 text-white text-xs uppercase tracking-widest px-3 py-1 rounded-full">Before</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl border-2 border-[#D5FF3F]">
+                        <img src="assets/bmw-after.jpeg" alt="BMW after structural repair" class="w-full">
+                        <span class="absolute top-3 left-3 accent-bg text-black text-xs uppercase tracking-widest px-3 py-1 rounded-full font-bold">After</span>
+                    </div>
+                    <p class="text-center font-black uppercase tracking-wider text-slate-300">BMW Write-off Rescue</p>
+                </div>
+                <div class="group space-y-4">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/merc-before.jpg" alt="Mercedes before accident repair" class="w-full grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <span class="absolute top-3 left-3 bg-black/70 text-white text-xs uppercase tracking-widest px-3 py-1 rounded-full">Before</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl border-2 border-[#D5FF3F]">
+                        <img src="assets/merc after.jpg" alt="Mercedes after accident repair" class="w-full">
+                        <span class="absolute top-3 left-3 accent-bg text-black text-xs uppercase tracking-widest px-3 py-1 rounded-full font-bold">After</span>
+                    </div>
+                    <p class="text-center font-black uppercase tracking-wider text-slate-300">Mercedes Rear Smash</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP + CONTACT -->
+        <section class="fade-in">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <p class="section-eyebrow mb-3">Find Us</p>
+                    <h2 class="brand-font text-5xl md:text-6xl font-black uppercase mb-4">We Come<br><span class="accent-text">To You</span></h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Based in Goodwood — but we serve all of Knysna with FREE collection and drop-off for repairs over R10,000. 
+                        <strong class="text-white">We Uber to you</strong> to collect your car and return it once it's perfect.
+                    </p>
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-start gap-4 p-5 rounded-xl bg-white/5 border border-white/10">
+                            <svg class="accent-text mt-1 shrink-0" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <div>
+                                <p class="font-bold text-white">7 Bloem Street, Townsend Estate, Goodwood</p>
+                                <p class="text-sm text-slate-400">Western Cape, 7460</p>
+                            </div>
+                        </div>
+                        <a href="tel:+27218018007" class="flex items-center gap-4 p-5 rounded-xl bg-white/5 border border-white/10 hover:border-[#D5FF3F]/40 transition-colors">
+                            <svg class="accent-text shrink-0" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.42 2 2 0 0 1 3.59 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <div>
+                                <p class="font-bold text-white">021 801 8007</p>
+                                <p class="text-sm text-slate-400">Mon–Fri 8am–5pm · Sat 8am–1pm</p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/27716871308" class="flex items-center gap-4 p-5 rounded-xl bg-white/5 border border-white/10 hover:border-[#D5FF3F]/40 transition-colors">
+                            <svg class="text-[#25D366] shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.849L0 24l6.304-1.504A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-5.001-1.369l-.36-.213-3.742.893.924-3.63-.235-.373A9.777 9.777 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+                            <div>
+                                <p class="font-bold text-white">WhatsApp: 071 687 1308</p>
+                                <p class="text-sm text-slate-400">Fastest way to get a quote</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/27716871308?text=Hi+IPS%2C+I%27m+from+Knysna+and+need+a+quote" class="btn-primary">Get My Free Quote</a>
+                    </div>
+                </div>
+
+                <!-- Google Map centred on the suburb -->
+                <div class="space-y-4">
+                    <div class="map-wrapper" style="height: 380px;">
+                        <iframe
+                            title="IPS serving Knysna"
+                            width="100%" height="100%"
+                            style="border:0;"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed/v1/search?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=Knysna,+South+Africa&zoom=13">
+                        </iframe>
+                    </div>
+                    <p class="text-xs text-slate-500 text-center">Map centred on Knysna — we collect from your door.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM CTA BAND -->
+        <section class="fade-in rounded-3xl overflow-hidden relative" style="background: linear-gradient(135deg, #111 0%, #1a1a05 100%); border: 1px solid rgba(213,255,63,0.15);">
+            <div class="absolute inset-0 opacity-5" style="background: repeating-linear-gradient(45deg, #D5FF3F 0px, #D5FF3F 1px, transparent 1px, transparent 20px);"></div>
+            <div class="relative text-center py-20 px-8">
+                <p class="section-eyebrow mb-4">Ready to Get Started?</p>
+                <h2 class="brand-font text-5xl md:text-7xl font-black uppercase mb-6 leading-none">
+                    Your Knysna Car<br><span class="accent-text">Deserves Better</span>
+                </h2>
+                <p class="text-slate-400 text-xl max-w-xl mx-auto mb-10">Send us photos on WhatsApp for a fast, free quote. We handle the rest — including collection from Knysna.</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="https://wa.me/27716871308?text=Hi%2C+I%27m+in+Knysna+and+need+an+auto+body+quote" class="btn-primary" style="font-size: 1.5rem; padding: 22px 48px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.849L0 24l6.304-1.504A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-5.001-1.369l-.36-.213-3.742.893.924-3.63-.235-.373A9.777 9.777 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+                        WhatsApp Us Now
+                    </a>
+                    <a href="tel:+27218018007" class="btn-secondary" style="font-size: 1.3rem; padding: 22px 40px;">
+                        Call 021 801 8007
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 py-16 px-6 text-center">
+        <img src="assets/ipslogo.png" alt="International Panel Shop" class="h-12 mx-auto mb-6">
+        <img src="assets/google.webp" alt="4.8 Google Reviews" class="h-16 mx-auto mb-8 opacity-80">
+        <p class="font-black uppercase tracking-wider brand-font text-xl">7 Bloem Street, Townsend Estate, Goodwood</p>
+        <p class="text-slate-600 text-sm mt-2">Western Cape · 021 801 8007 · WhatsApp: 071 687 1308</p>
+        <div class="flex justify-center gap-6 mt-6 text-sm text-slate-500">
+            <a href="https://www.intpanelshop.co.za" class="hover:text-[#D5FF3F] transition-colors">intpanelshop.co.za</a>
+            <span>·</span>
+            <span>© 2026 International Panel Shop</span>
+        </div>
+        <p class="text-slate-700 text-xs mt-4 opacity-40">Serving Knysna and all of the Western Cape</p>
+    </footer>
+
+    <!-- Scroll fade-in script -->
+    <script>
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+        }, { threshold: 0.12 });
+        fadeEls.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

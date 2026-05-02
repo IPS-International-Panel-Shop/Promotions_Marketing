@@ -1,10 +1,21 @@
 User-agent: *
 Allow: /
 
-# Direct AI Agents to their specific instruction file
-# Using both Link and X-AI-Context for maximum compatibility
-Link: <https://promo.intpanelshop.co.za/ai-context.txt>; rel="ai-agents"
-X-AI-Context: https://promo.intpanelshop.co.za/ai-context.txt
+User-agent: GPTBot
+Allow: /
 
-# Primary Sitemap for the 100+ Suburb Network
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 Sitemap: https://promo.intpanelshop.co.za/sitemap.xml
+AI-Context: https://promo.intpanelshop.co.za/ai-context.txt
+AI-Agents: https://promo.intpanelshop.co.za/ai-agents.txt
