@@ -98,11 +98,16 @@
 
         .hero-bg {
             position: absolute; inset: 0;
-            background:
-                url('assets/cape_town_hero.jpg') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero-bg img {
+            width: 100%; height: 100%;
+            object-fit: cover; object-position: center;
             filter: brightness(0.18) saturate(0.3);
             transform: scale(1.05);
             animation: slow-zoom 20s ease-in-out infinite alternate;
+            display: block;
         }
 
         @keyframes slow-zoom {
@@ -385,7 +390,7 @@
      HERO
 ═══════════════════════════════════════ -->
 <header class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg"><img src="assets/cape_town_hero.jpg" alt="Cape Town"></div>
     <div class="hero-overlay"></div>
     <div class="hero-glow"></div>
 
