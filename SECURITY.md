@@ -23,7 +23,7 @@ If you discover a security vulnerability in any of our systems (including the we
 
 ### How to Report
 
-Send a detailed report to: **info@intpanelshop.co.za**
+Send a detailed report to: **admin@intpanelshop.co.za**
 
 ### What to Include in Your Report
 
