@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repair Credit & Sure Drive Asset Protection | IPS Auto Body</title>
-    <meta name="description" content="Access secure repair credit via PayFast, Mobicred, RCS or protect your vehicle with SureDrive at International Panel Shop Cape Town.">
+    <meta name="description" content="Access secure repair credit via PayFast or protect your vehicle with the Sure Drive pre-payment ecosystem. Western Cape's elite auto body solution.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
     <style>
         :root {
             --lime: #D5FF3F;
@@ -19,6 +21,7 @@
             font-family: 'Barlow', sans-serif; 
             background-color: var(--slate-bank); 
             color: #e2e8f0; 
+            overflow-x: hidden;
         }
         .brand-font { font-family: 'Barlow Condensed', sans-serif; }
         
@@ -37,6 +40,10 @@
             background: linear-gradient(135deg, #D5FF3F 0%, #b8e61e 100%);
             color: #000;
         }
+        lottie-player {
+            width: 100%;
+            height: 380px;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -46,7 +53,7 @@
         <div class="flex items-center gap-6">
             <img src="assets/ipslogo.png" alt="IPS Logo" class="h-11">
         </div>
-        <a href="https://www.intpanelshop.co.za" class="btn-outline px-6 py-2.5 rounded-xl text-sm font-bold uppercase tracking-widest border border-[#D5FF3F]/50 text-[#D5FF3F] hover:bg-[#D5FF3F] hover:text-black transition-all">
+        <a href="https://www.intpanelshop.co.za" class="px-6 py-2.5 rounded-xl text-sm font-bold uppercase tracking-widest border border-[#D5FF3F]/50 text-[#D5FF3F] hover:bg-[#D5FF3F] hover:text-black transition-all">
             Main Site
         </a>
     </nav>
@@ -67,12 +74,12 @@
             </h1>
             
             <p class="text-2xl md:text-3xl max-w-4xl mx-auto text-slate-200 font-light leading-relaxed">
-                Digital payment infrastructure meets industrial craftsmanship. Whether accessing credit via <strong>PayFast</strong>, <strong>Mobicred</strong>, <strong>RCS</strong> or loading <strong>SureBucks</strong>, we keep your asset protected at International Panel Shop.
+                Digital payment infrastructure meets industrial craftsmanship. Whether accessing credit via <strong>PayFast</strong>, <strong>Mobicred</strong>, <strong>RCS</strong> or loading <strong>SureBucks</strong>, we keep your asset protected.
             </p>
             
             <div class="mt-16">
                 <a href="https://wa.me/27716871308?text=Hi+IPS+I+need+a+finance+quote" 
-                   class="inline-block bg-[#D5FF3F] hover:bg-white text-black font-black brand-font text-3xl px-14 py-6 rounded-3xl uppercase italic tracking-wide transition-all shadow-2xl">
+                   class="inline-block bg-[#D5FF3F] text-black font-black brand-font text-3xl px-14 py-6 rounded-3xl uppercase italic tracking-wide transition-all shadow-2xl hover:scale-105">
                     Request Credit Link
                 </a>
             </div>
@@ -81,7 +88,7 @@
 
     <main class="max-w-7xl mx-auto px-6 py-24 space-y-24">
 
-        <!-- PayFast Section -->
+        <!-- PayFast + Animation Section -->
         <section class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="space-y-12">
                 <div>
@@ -107,7 +114,6 @@
                     </div>
                 </div>
 
-                <!-- Logistics -->
                 <div class="finance-card rounded-3xl overflow-hidden flex flex-col md:flex-row">
                     <img src="assets/quote.png" alt="Service Logistics" class="w-full md:w-5/12 object-cover">
                     <div class="p-8">
@@ -118,13 +124,20 @@
                 </div>
             </div>
 
-            <div>
-                <img src="assets/happy-customer-keys.jpg" alt="Happy customer receiving car keys" class="rounded-3xl shadow-2xl">
-                <p class="mt-6 text-center italic text-slate-400">"Professional work, friendly team, and my car looks brand new again. Highly recommended!"</p>
+            <!-- Lottie Animation -->
+            <div class="bg-zinc-900 rounded-3xl p-6 border border-white/10">
+                <lottie-player 
+                    src="/assets/car safe.lottie" 
+                    background="transparent" 
+                    speed="1" 
+                    loop 
+                    autoplay>
+                </lottie-player>
+                <p class="text-center italic text-slate-400 mt-4">"Your car is safe with us — professionally repaired and protected."</p>
             </div>
         </section>
 
-        <!-- Sure Drive -->
+        <!-- Sure Drive Section -->
         <section class="suredrive-section p-12 md:p-16 rounded-[40px]">
             <div class="flex justify-between items-start mb-8">
                 <img src="assets/suredrive.jpg" alt="Sure Drive" class="h-9">
@@ -163,7 +176,7 @@
                 <img src="assets/aurora-logo.png" alt="Aurora" class="h-7">
             </a>
             
-            <p class="text-xs text-slate-500 mt-8">International Panel Shop reserves the right to accept or decline any quote. Final pricing will be confirmed after physical inspection in our official format.</p>
+            <p class="text-xs text-slate-500 mt-8">International Panel Shop reserves the right to accept or decline any quote. Final pricing will be confirmed after physical inspection.</p>
         </section>
     </main>
 
