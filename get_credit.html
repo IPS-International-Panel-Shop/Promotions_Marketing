@@ -8,8 +8,9 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Lottie Player -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- Updated to DotLottie Player for .lottie files -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
     <style>
         :root {
@@ -40,7 +41,8 @@
             background: linear-gradient(135deg, #D5FF3F 0%, #b8e61e 100%);
             color: #000;
         }
-        lottie-player {
+        /* Updated selector to dotlottie-player */
+        dotlottie-player {
             width: 100%;
             height: 380px;
         }
@@ -124,15 +126,15 @@
                 </div>
             </div>
 
-            <!-- Lottie Animation -->
+            <!-- DotLottie Animation Fixed -->
             <div class="bg-zinc-900 rounded-3xl p-6 border border-white/10">
-                <lottie-player 
-                    src="/assets/car safe.lottie" 
+                <dotlottie-player 
+                    src="assets/car safe.lottie" 
                     background="transparent" 
                     speed="1" 
                     loop 
                     autoplay>
-                </lottie-player>
+                </dotlottie-player>
                 <p class="text-center italic text-slate-400 mt-4">"Your car is safe with us — professionally repaired and protected."</p>
             </div>
         </section>
@@ -182,7 +184,7 @@
 
     <footer class="border-t border-white/10 py-12 text-center text-sm text-slate-500">
         <img src="assets/ipslogo.png" class="h-6 mx-auto mb-4 opacity-40">
-        <p>© 2026 International Panel Shop (PTY) LTD • 7 Bloem Street, Goodwood, Cape Town</p>
+        <p>© 2026 International Panel Shop • 7 Bloem Street, Goodwood, Cape Town</p>
     </footer>
 </body>
 </html>
