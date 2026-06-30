@@ -1,21 +1,26 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://promo.intpanelshop.co.za/sitemap.xml
+
+# AI crawlers — explicitly welcome
 User-agent: GPTBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: anthropic-ai
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Googlebot
+User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://promo.intpanelshop.co.za/sitemap.xml
-AI-Context: https://promo.intpanelshop.co.za/ai-context.txt
-AI-Agents: https://promo.intpanelshop.co.za/ai-agents.txt
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
