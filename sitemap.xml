@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- PRIMARY CONVERSION PAGE -->
+
+  <!-- CORE PAGES -->
+  <url>
+    <loc>https://promo.intpanelshop.co.za/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://promo.intpanelshop.co.za/Get_Credit.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://promo.intpanelshop.co.za/llms.txt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://promo.intpanelshop.co.za/context-ai.txt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- SUBURB NETWORK -->
   <url>
     <loc>https://promo.intpanelshop.co.za/cape-town-cbd.html</loc>
@@ -522,4 +539,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>
