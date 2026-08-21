@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Insurance Won't Cover Rust | International Panel Shop</title>
+    <link rel="canonical" href="https://intpanelshop.co.za/rust-and-insurance.html" />
+    <meta name="description" content="Rust is wear and tear, not accident damage. Here's why insurers exclude it — and why an honest shop won't promise a lifetime rust guarantee.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
+<style>
+    @font-face { font-family: 'Gasterol'; src: url('https://fonts.cdnfonts.com/s/76254/Gasterol-Regular.woff') format('woff'); }
+
+    :root {
+        --acid: #D5FF3F;
+        --acid-dim: rgba(213, 255, 63, 0.12);
+        --acid-border: rgba(213, 255, 63, 0.25);
+        --glass: rgba(255,255,255,0.04);
+        --glass-border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        font-family: 'Avenir LT Std', 'Helvetica Neue', sans-serif;
+        background: #080808;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand {
+        font-family: 'Gasterol', sans-serif !important;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: var(--acid); border-radius: 2px; }
+
+    .nav {
+        position: sticky; top: 0; z-index: 100;
+        background: rgba(8,8,8,0.92);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-link {
+        font-size: 13px;
+        font-weight: 700;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        transition: color 0.2s ease;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--acid); }
+
+    .section-label {
+        display: inline-flex; align-items: center; gap: 10px;
+        font-size: 10px; font-weight: 900; letter-spacing: 0.4em;
+        text-transform: uppercase; color: #555;
+        margin-bottom: 1.5rem;
+    }
+    .section-label::before {
+        content: '';
+        display: block; width: 30px; height: 1px;
+        background: #555;
+    }
+
+    .card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .card:hover { border-color: var(--acid-border); transform: translateY(-2px); }
+    .card::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse at top left, rgba(213,255,63,0.04) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .btn-acid {
+        background: var(--acid);
+        color: #000;
+        font-family: 'Gasterol', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 0.75rem;
+        transition: filter 0.2s ease, transform 0.2s ease;
+        display: inline-block;
+    }
+    .btn-acid:hover { filter: brightness(1.1); transform: scale(1.03); }
+
+    .btn-outline {
+        background: transparent;
+        border: 1px solid var(--acid-border);
+        color: var(--acid);
+        font-family: 'Gasterol', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 0.75rem;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+    .btn-outline:hover { background: var(--acid); color: #000; }
+
+    .h-divider { width: 100%; height: 1px; background: var(--glass-border); }
+
+    .eyebrow-pill {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: var(--acid-dim);
+        border: 1px solid var(--acid-border);
+        padding: 6px 16px; border-radius: 100px;
+        font-size: 11px; font-weight: 900; letter-spacing: 0.2em;
+        text-transform: uppercase; color: var(--acid);
+    }
+    .eyebrow-pill::before {
+        content: '';
+        width: 7px; height: 7px;
+        background: var(--acid);
+        border-radius: 50%;
+    }
+
+    /* ── ARTICLE BODY TYPOGRAPHY ── */
+    .article-body h2 {
+        font-family: 'Gasterol', sans-serif;
+        color: var(--acid);
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        margin-top: 3rem;
+        margin-bottom: 1.25rem;
+    }
+    .article-body p {
+        color: #c4c4c4;
+        line-height: 1.85;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+    }
+    .article-body ul, .article-body ol {
+        color: #c4c4c4;
+        line-height: 1.85;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body li::marker { color: var(--acid); }
+    .article-body strong { color: #fff; }
+    .article-body img {
+        width: 100%;
+        border-radius: 1.25rem;
+        border: 1px solid var(--glass-border);
+        margin: 2.5rem 0 0.75rem;
+    }
+    .article-body .img-caption {
+        font-size: 11px;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 2rem;
+    }
+    .faq-item {
+        border-top: 1px solid var(--glass-border);
+        padding: 1.75rem 0;
+    }
+    .faq-q {
+        font-family: 'Gasterol', sans-serif;
+        color: #fff;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        margin-bottom: 0.6rem;
+    }
+    .faq-a { color: #999; line-height: 1.8; font-size: 0.98rem; }
+
+    .article-card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: block;
+    }
+    .article-card:hover { border-color: var(--acid-border); transform: translateY(-3px); }
+    .article-card img { width: 100%; height: 200px; object-fit: cover; display: block; filter: grayscale(0.3); transition: filter 0.3s ease; }
+    .article-card:hover img { filter: grayscale(0); }
+    .article-tag {
+        font-size: 10px; font-weight: 900; letter-spacing: 0.15em;
+        text-transform: uppercase; color: var(--acid);
+        margin-bottom: 0.75rem; display: block;
+    }
+</style>
+
+</head>
+<body>
+<nav class="nav">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html"><img src="assets/ipslogo.png" alt="IPS Logo" class="h-10 md:h-12"></a>
+        <div class="flex items-center gap-6">
+            <a href="articles.html" class="nav-link active hidden md:block">Articles</a>
+            <a href="tel:+27716871308" class="hidden md:block text-sm font-bold text-slate-400 hover:text-white transition-colors">+27 71 687 1308</a>
+            <a href="https://wa.me/27716871308" class="btn-acid px-6 py-3 text-sm">WhatsApp Quote</a>
+        </div>
+    </div>
+</nav>
+
+
+<section class="max-w-4xl mx-auto px-6 md:px-10 pt-16 pb-4">
+    <a href="articles.html" class="text-xs uppercase tracking-widest text-slate-500 hover:text-white transition-colors mb-8 inline-block">&larr; All Articles</a>
+    <div class="eyebrow-pill mb-6">Rust & Insurance</div>
+    <h1 class="hero-title-sm" style="font-size:clamp(2.2rem, 5vw, 3.6rem); line-height:1.05; letter-spacing:-0.02em; text-transform:uppercase;">Why Insurance Won't Cover Rust</h1>
+    <p class="text-lg md:text-xl text-slate-400 font-medium mt-4">(And why no panel shop will guarantee the repair)</p>
+</section>
+
+<section class="max-w-4xl mx-auto px-6 md:px-10 article-body">
+    <img src="https://images.pexels.com/photos/8169838/pexels-photo-8169838.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="Why Insurance Won't Cover Rust">
+    <p class="img-caption">Photo: Pexels</p>
+    
+<p>Every few weeks someone brings a car in here in Goodwood, points at a bubble under the paint on a sill or a wheel arch, and asks the same question: "My insurance will cover this, right?"</p>
+<p>The honest answer, almost every time, is no. And once you understand what rust actually is, it makes sense why &mdash; and why we, like every reputable panel shop, won't put a lifetime guarantee on a rust repair either.</p>
+
+<h2>Rust Is Wear and Tear, Not an Accident</h2>
+<p>Motor insurance in South Africa is built to cover <strong>sudden, unforeseen events</strong> &mdash; a collision, hail, theft, a break-in, a tree falling on your bonnet. Rust doesn't happen suddenly. It's a slow electrochemical process: bare metal, moisture, and oxygen reacting over weeks, months, and years.</p>
+<p>Every standard motor policy in the country carries a wear-and-tear and gradual-deterioration exclusion. Rust falls squarely into that category, alongside things like worn brake pads, faded paint, and a tired clutch. Insurers aren't being difficult here &mdash; corrosion is specifically the kind of maintenance issue that premiums were never priced to cover.</p>
+<p>The only time rust repair enters an insurance claim is when it's a <strong>direct, incidental result of accident damage that's being repaired anyway</strong> &mdash; for example, if a panel was dented in a collision and surface rust started forming on the exposed metal edge before you got it in for repair. Even then, the insurer is covering the collision damage, not the rust itself.</p>
+
+<h2>Why We Won't Guarantee a Rust Repair for Life</h2>
+<p>This surprises people, so it's worth explaining properly.</p>
+<p>When we repair a rusted panel &mdash; cutting out the affected metal, welding in new steel, treating and repainting it &mdash; we're giving you a repair that's as good as the panel can be made. What we can't control is everything that happens to that car afterwards:</p>
+<ul>
+    <li><strong>Where you park it.</strong> Cape Town's salt air near the coast accelerates corrosion dramatically compared to the southern suburbs.</li>
+    <li><strong>How it's washed (or not washed).</strong> Salt, brake dust, and road grime left to sit are exactly what restarts the corrosion cycle.</li>
+    <li><strong>Stone chips and scratches</strong> that expose bare metal again and are never touched up.</li>
+    <li><strong>The condition of the rest of the vehicle.</strong> If a car is rusting in one place, it's very often an early sign of the same thing happening elsewhere out of sight &mdash; inside sills, behind trim, under seals.</li>
+</ul>
+<p>A "lifetime rust guarantee" would mean promising to control all of those things for as long as you own the car. No panel shop that actually understands metal will make that promise, because it isn't ours to make. Anyone who offers you an unconditional lifetime rust guarantee is either not going to be around to honour it, or has priced the risk into the quote in a way you're not seeing.</p>
+<p>What we <strong>will</strong> stand behind is the quality of the workmanship on the day &mdash; proper metal cut-back to clean steel, correct weld penetration, and full anti-corrosion treatment and primer before paint, done to the standard the repair deserves.</p>
+
+<h2>What Actually Slows Rust Down</h2>
+<ul>
+    <li>Regular washing, especially the underside, if you're anywhere near the sea</li>
+    <li>Prompt touch-ups on stone chips before they spread</li>
+    <li>Checking drain holes in doors and sills aren't blocked</li>
+    <li>Dealing with small rust spots while they're small, not once they've become a hole</li>
+</ul>
+
+    <div class="section-label mt-10">Frequently Asked</div>
+    <div class="mt-4"><div class="faq-item"><div class="faq-q">Does comprehensive car insurance cover rust in South Africa?</div><div class="faq-a">No. Rust is treated as gradual deterioration/wear and tear, which is excluded from standard motor policies, the same way worn tyres or a failing clutch are excluded.</div></div><div class="faq-item"><div class="faq-q">Will any panel shop guarantee a rust repair won't come back?</div><div class="faq-a">A shop can guarantee the quality of the workmanship &mdash; correct metal replacement and treatment &mdash; but not that rust will never return, because that depends on how and where the car is kept and driven afterwards. Be cautious of anyone promising an unconditional lifetime rust guarantee.</div></div><div class="faq-item"><div class="faq-q">Can I claim if rust caused a hole that let water in and damaged the interior?</div><div class="faq-a">Generally no &mdash; because the root cause (rust) is excluded, the consequential damage from it is usually excluded too. It's worth checking your specific policy wording, but this is the standard position.</div></div><div class="faq-item"><div class="faq-q">Is it worth fixing rust if insurance won't pay?</div><div class="faq-a">Yes, especially early. A small rust repair now is far cheaper than a structural repair later, and untreated rust affects resale value and can eventually affect roadworthiness.</div></div></div>
+</section>
+
+<div style="background:var(--acid);padding:3.5rem 1.5rem;text-align:center;margin-top:3rem;">
+    <h2 class="brand text-2xl md:text-4xl text-black uppercase tracking-tight mb-3">Get Your Free Quote</h2>
+    <p class="text-black/70 text-base mb-6 font-medium">Based in Goodwood &middot; We service all of Cape Town &middot; Free pick-up & delivery</p>
+    <a href="https://wa.me/27716871308?text=Hi,%20I'd%20like%20a%20free%20quote%20on%20rust%20repair" style="background:#000;color:var(--acid);padding:1rem 2.5rem;border-radius:0.75rem;font-family:'Gasterol',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:0.05em;display:inline-block;">
+        WhatsApp Us Now &middot; 071 687 1308
+    </a>
+</div>
+
+
+<footer style="background:#050505;border-top:1px solid var(--glass-border);padding:5rem 1.5rem 3rem;">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <img src="assets/ipslogo.png" alt="IPS" class="h-12 mb-4 opacity-80">
+                <p class="text-slate-500 text-xs leading-relaxed">Western Cape's most trusted auto body repair specialists. Factory-quality repairs, free collection, flexible finance.</p>
+            </div>
+            <div>
+                <h4 class="brand text-sm uppercase tracking-widest mb-4" style="color:var(--acid)">Contact</h4>
+                <p class="text-slate-400 text-sm mb-2">7 Bloem Street, Townsend Estate, Goodwood</p>
+                <a href="https://wa.me/27716871308" class="text-slate-400 text-sm hover:text-white transition-colors">+27 71 687 1308</a>
+            </div>
+            <div>
+                <h4 class="brand text-sm uppercase tracking-widest mb-4" style="color:var(--acid)">Trust</h4>
+                <img src="assets/google.webp" alt="4.8 Google Reviews" class="h-20 mb-3">
+                <p class="text-slate-500 text-xs uppercase tracking-widest">The Western Cape's Most Trusted Team</p>
+            </div>
+        </div>
+        <div class="h-divider mb-8"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-700 text-xs tracking-widest">© 2026 IPS // Promotions Hub</p>
+            <p class="text-slate-700 text-xs">Built by <a href="https://forgevertical.com" class="hover:text-slate-400 transition-colors">forgevertical.com</a></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
