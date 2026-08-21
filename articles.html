@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | International Panel Shop</title>
+    <link rel="canonical" href="https://intpanelshop.co.za/articles.html" />
+    <meta name="description" content="Straight answers on rust, paint guarantees, repair disputes, and car care in Cape Town — from International Panel Shop, Goodwood.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
+<style>
+    @font-face { font-family: 'Gasterol'; src: url('https://fonts.cdnfonts.com/s/76254/Gasterol-Regular.woff') format('woff'); }
+
+    :root {
+        --acid: #D5FF3F;
+        --acid-dim: rgba(213, 255, 63, 0.12);
+        --acid-border: rgba(213, 255, 63, 0.25);
+        --glass: rgba(255,255,255,0.04);
+        --glass-border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        font-family: 'Avenir LT Std', 'Helvetica Neue', sans-serif;
+        background: #080808;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand {
+        font-family: 'Gasterol', sans-serif !important;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: var(--acid); border-radius: 2px; }
+
+    .nav {
+        position: sticky; top: 0; z-index: 100;
+        background: rgba(8,8,8,0.92);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-link {
+        font-size: 13px;
+        font-weight: 700;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        transition: color 0.2s ease;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--acid); }
+
+    .section-label {
+        display: inline-flex; align-items: center; gap: 10px;
+        font-size: 10px; font-weight: 900; letter-spacing: 0.4em;
+        text-transform: uppercase; color: #555;
+        margin-bottom: 1.5rem;
+    }
+    .section-label::before {
+        content: '';
+        display: block; width: 30px; height: 1px;
+        background: #555;
+    }
+
+    .card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .card:hover { border-color: var(--acid-border); transform: translateY(-2px); }
+    .card::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse at top left, rgba(213,255,63,0.04) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .btn-acid {
+        background: var(--acid);
+        color: #000;
+        font-family: 'Gasterol', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 0.75rem;
+        transition: filter 0.2s ease, transform 0.2s ease;
+        display: inline-block;
+    }
+    .btn-acid:hover { filter: brightness(1.1); transform: scale(1.03); }
+
+    .btn-outline {
+        background: transparent;
+        border: 1px solid var(--acid-border);
+        color: var(--acid);
+        font-family: 'Gasterol', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 0.75rem;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+    .btn-outline:hover { background: var(--acid); color: #000; }
+
+    .h-divider { width: 100%; height: 1px; background: var(--glass-border); }
+
+    .eyebrow-pill {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: var(--acid-dim);
+        border: 1px solid var(--acid-border);
+        padding: 6px 16px; border-radius: 100px;
+        font-size: 11px; font-weight: 900; letter-spacing: 0.2em;
+        text-transform: uppercase; color: var(--acid);
+    }
+    .eyebrow-pill::before {
+        content: '';
+        width: 7px; height: 7px;
+        background: var(--acid);
+        border-radius: 50%;
+    }
+
+    /* ── ARTICLE BODY TYPOGRAPHY ── */
+    .article-body h2 {
+        font-family: 'Gasterol', sans-serif;
+        color: var(--acid);
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        margin-top: 3rem;
+        margin-bottom: 1.25rem;
+    }
+    .article-body p {
+        color: #c4c4c4;
+        line-height: 1.85;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+    }
+    .article-body ul, .article-body ol {
+        color: #c4c4c4;
+        line-height: 1.85;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body li::marker { color: var(--acid); }
+    .article-body strong { color: #fff; }
+    .article-body img {
+        width: 100%;
+        border-radius: 1.25rem;
+        border: 1px solid var(--glass-border);
+        margin: 2.5rem 0 0.75rem;
+    }
+    .article-body .img-caption {
+        font-size: 11px;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 2rem;
+    }
+    .faq-item {
+        border-top: 1px solid var(--glass-border);
+        padding: 1.75rem 0;
+    }
+    .faq-q {
+        font-family: 'Gasterol', sans-serif;
+        color: #fff;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        margin-bottom: 0.6rem;
+    }
+    .faq-a { color: #999; line-height: 1.8; font-size: 0.98rem; }
+
+    .article-card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: block;
+    }
+    .article-card:hover { border-color: var(--acid-border); transform: translateY(-3px); }
+    .article-card img { width: 100%; height: 200px; object-fit: cover; display: block; filter: grayscale(0.3); transition: filter 0.3s ease; }
+    .article-card:hover img { filter: grayscale(0); }
+    .article-tag {
+        font-size: 10px; font-weight: 900; letter-spacing: 0.15em;
+        text-transform: uppercase; color: var(--acid);
+        margin-bottom: 0.75rem; display: block;
+    }
+</style>
+
+</head>
+<body>
+<nav class="nav">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html"><img src="assets/ipslogo.png" alt="IPS Logo" class="h-10 md:h-12"></a>
+        <div class="flex items-center gap-6">
+            <a href="articles.html" class="nav-link active hidden md:block">Articles</a>
+            <a href="tel:+27716871308" class="hidden md:block text-sm font-bold text-slate-400 hover:text-white transition-colors">+27 71 687 1308</a>
+            <a href="https://wa.me/27716871308" class="btn-acid px-6 py-3 text-sm">WhatsApp Quote</a>
+        </div>
+    </div>
+</nav>
+
+<section class="relative max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-4">
+    <div class="eyebrow-pill mb-8">From The Workshop</div>
+    <h1 class="hero-title" style="font-size:clamp(2.8rem, 7vw, 5.5rem); line-height:0.95; letter-spacing:-0.02em; text-transform:uppercase;">
+        Straight Answers.<br><span style="color:var(--acid)">No Sales Talk.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-slate-400 font-medium max-w-2xl mt-6 mb-16">
+        Real questions we get asked in Goodwood every week &mdash; about rust, paint, insurance, and what's actually true versus what's marketing.
+    </p>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 md:px-10 pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+    <a href="rust-and-insurance.html" class="article-card">
+        <img src="https://images.pexels.com/photos/8169838/pexels-photo-8169838.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="Why Insurance Won't Cover Rust">
+        <div class="p-6">
+            <span class="article-tag">Rust & Insurance</span>
+            <h3 class="brand text-xl uppercase leading-tight mb-2 text-white">Why Insurance Won't Cover Rust</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Rust is wear and tear, not accident damage. Here's why insurers exclude it — and why an honest shop won't promise a lifetime rust guarantee.</p>
+        </div>
+    </a>
+    <a href="lifetime-paint-guarantee-myth.html" class="article-card">
+        <img src="https://images.pexels.com/photos/6870314/pexels-photo-6870314.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="The 'Lifetime Paint Guarantee' Myth">
+        <div class="p-6">
+            <span class="article-tag">Paintwork</span>
+            <h3 class="brand text-xl uppercase leading-tight mb-2 text-white">The 'Lifetime Paint Guarantee' Myth</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Automotive paint expands and contracts with heat and cold for as long as the car exists. Here's what a fair paint guarantee actually covers.</p>
+        </div>
+    </a>
+    <a href="never-sounded-like-that-false-claims.html" class="article-card">
+        <img src="https://images.pexels.com/photos/6870310/pexels-photo-6870310.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="“My Car Never Sounded Like That”">
+        <div class="p-6">
+            <span class="article-tag">Know Your Rights</span>
+            <h3 class="brand text-xl uppercase leading-tight mb-2 text-white">“My Car Never Sounded Like That”</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Sometimes a noise after repair is real and needs sorting. Sometimes it's used to dodge a bill. Here's how we tell the difference — and where the law draws the line.</p>
+        </div>
+    </a>
+    <a href="10-tips-protect-your-car.html" class="article-card">
+        <img src="https://images.pexels.com/photos/17177648/pexels-photo-17177648.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="10 Tips to Protect Your Paint & Metal">
+        <div class="p-6">
+            <span class="article-tag">Car Care</span>
+            <h3 class="brand text-xl uppercase leading-tight mb-2 text-white">10 Tips to Protect Your Paint & Metal</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Practical, Cape Town-specific habits that slow down rust and fading — for coastal suburbs and the northern suburbs alike.</p>
+        </div>
+    </a>
+    </div>
+</section>
+
+<footer style="background:#050505;border-top:1px solid var(--glass-border);padding:5rem 1.5rem 3rem;">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <img src="assets/ipslogo.png" alt="IPS" class="h-12 mb-4 opacity-80">
+                <p class="text-slate-500 text-xs leading-relaxed">Western Cape's most trusted auto body repair specialists. Factory-quality repairs, free collection, flexible finance.</p>
+            </div>
+            <div>
+                <h4 class="brand text-sm uppercase tracking-widest mb-4" style="color:var(--acid)">Contact</h4>
+                <p class="text-slate-400 text-sm mb-2">7 Bloem Street, Townsend Estate, Goodwood</p>
+                <a href="https://wa.me/27716871308" class="text-slate-400 text-sm hover:text-white transition-colors">+27 71 687 1308</a>
+            </div>
+            <div>
+                <h4 class="brand text-sm uppercase tracking-widest mb-4" style="color:var(--acid)">Trust</h4>
+                <img src="assets/google.webp" alt="4.8 Google Reviews" class="h-20 mb-3">
+                <p class="text-slate-500 text-xs uppercase tracking-widest">The Western Cape's Most Trusted Team</p>
+            </div>
+        </div>
+        <div class="h-divider mb-8"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-700 text-xs tracking-widest">© 2026 IPS // Promotions Hub</p>
+            <p class="text-slate-700 text-xs">Built by <a href="https://forgevertical.com" class="hover:text-slate-400 transition-colors">forgevertical.com</a></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
