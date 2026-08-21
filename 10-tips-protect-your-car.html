@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Tips to Protect Your Paint & Metal | International Panel Shop</title>
+    <link rel="canonical" href="https://intpanelshop.co.za/10-tips-protect-your-car.html" />
+    <meta name="description" content="Practical, Cape Town-specific habits that slow down rust and fading — for coastal suburbs and the northern suburbs alike.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
+<style>
+    @font-face { font-family: 'Gasterol'; src: url('https://fonts.cdnfonts.com/s/76254/Gasterol-Regular.woff') format('woff'); }
+
+    :root {
+        --acid: #D5FF3F;
+        --acid-dim: rgba(213, 255, 63, 0.12);
+        --acid-border: rgba(213, 255, 63, 0.25);
+        --glass: rgba(255,255,255,0.04);
+        --glass-border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        font-family: 'Avenir LT Std', 'Helvetica Neue', sans-serif;
+        background: #080808;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand {
+        font-family: 'Gasterol', sans-serif !important;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: var(--acid); border-radius: 2px; }
+
+    .nav {
+        position: sticky; top: 0; z-index: 100;
+        background: rgba(8,8,8,0.92);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-link {
+        font-size: 13px;
+        font-weight: 700;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        transition: color 0.2s ease;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--acid); }
+
+    .section-label {
+        display: inline-flex; align-items: center; gap: 10px;
+        font-size: 10px; font-weight: 900; letter-spacing: 0.4em;
+        text-transform: uppercase; color: #555;
+        margin-bottom: 1.5rem;
+    }
+    .section-label::before {
+        content: '';
+        display: block; width: 30px; height: 1px;
+        background: #555;
+    }
+
+    .card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .card:hover { border-color: var(--acid-border); transform: translateY(-2px); }
+    .card::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse at top left, rgba(213,255,63,0.04) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .btn-acid {
+        background: var(--acid);
+        color: #000;
+        font-family: 'Gasterol', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 0.75rem;
+        transition: filter 0.2s ease, transform 0.2s ease;
+        display: inline-block;
+    }
+    .btn-acid:hover { filter: brightness(1.1); transform: scale(1.03); }
+
+    .btn-outline {
+        background: transparent;
+        border: 1px solid var(--acid-border);
+        color: var(--acid);
+        font-family: 'Gasterol', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 0.75rem;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+    .btn-outline:hover { background: var(--acid); color: #000; }
+
+    .h-divider { width: 100%; height: 1px; background: var(--glass-border); }
+
+    .eyebrow-pill {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: var(--acid-dim);
+        border: 1px solid var(--acid-border);
+        padding: 6px 16px; border-radius: 100px;
+        font-size: 11px; font-weight: 900; letter-spacing: 0.2em;
+        text-transform: uppercase; color: var(--acid);
+    }
+    .eyebrow-pill::before {
+        content: '';
+        width: 7px; height: 7px;
+        background: var(--acid);
+        border-radius: 50%;
+    }
+
+    /* ── ARTICLE BODY TYPOGRAPHY ── */
+    .article-body h2 {
+        font-family: 'Gasterol', sans-serif;
+        color: var(--acid);
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        margin-top: 3rem;
+        margin-bottom: 1.25rem;
+    }
+    .article-body p {
+        color: #c4c4c4;
+        line-height: 1.85;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+    }
+    .article-body ul, .article-body ol {
+        color: #c4c4c4;
+        line-height: 1.85;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body li::marker { color: var(--acid); }
+    .article-body strong { color: #fff; }
+    .article-body img {
+        width: 100%;
+        border-radius: 1.25rem;
+        border: 1px solid var(--glass-border);
+        margin: 2.5rem 0 0.75rem;
+    }
+    .article-body .img-caption {
+        font-size: 11px;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 2rem;
+    }
+    .faq-item {
+        border-top: 1px solid var(--glass-border);
+        padding: 1.75rem 0;
+    }
+    .faq-q {
+        font-family: 'Gasterol', sans-serif;
+        color: #fff;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        margin-bottom: 0.6rem;
+    }
+    .faq-a { color: #999; line-height: 1.8; font-size: 0.98rem; }
+
+    .article-card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: block;
+    }
+    .article-card:hover { border-color: var(--acid-border); transform: translateY(-3px); }
+    .article-card img { width: 100%; height: 200px; object-fit: cover; display: block; filter: grayscale(0.3); transition: filter 0.3s ease; }
+    .article-card:hover img { filter: grayscale(0); }
+    .article-tag {
+        font-size: 10px; font-weight: 900; letter-spacing: 0.15em;
+        text-transform: uppercase; color: var(--acid);
+        margin-bottom: 0.75rem; display: block;
+    }
+</style>
+
+</head>
+<body>
+<nav class="nav">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html"><img src="assets/ipslogo.png" alt="IPS Logo" class="h-10 md:h-12"></a>
+        <div class="flex items-center gap-6">
+            <a href="articles.html" class="nav-link active hidden md:block">Articles</a>
+            <a href="tel:+27716871308" class="hidden md:block text-sm font-bold text-slate-400 hover:text-white transition-colors">+27 71 687 1308</a>
+            <a href="https://wa.me/27716871308" class="btn-acid px-6 py-3 text-sm">WhatsApp Quote</a>
+        </div>
+    </div>
+</nav>
+
+
+<section class="max-w-4xl mx-auto px-6 md:px-10 pt-16 pb-4">
+    <a href="articles.html" class="text-xs uppercase tracking-widest text-slate-500 hover:text-white transition-colors mb-8 inline-block">&larr; All Articles</a>
+    <div class="eyebrow-pill mb-6">Car Care</div>
+    <h1 class="hero-title-sm" style="font-size:clamp(2.2rem, 5vw, 3.6rem); line-height:1.05; letter-spacing:-0.02em; text-transform:uppercase;">10 Tips to Protect Your Paint & Metal</h1>
+    <p class="text-lg md:text-xl text-slate-400 font-medium mt-4">Whether you live near the sea, or not</p>
+</section>
+
+<section class="max-w-4xl mx-auto px-6 md:px-10 article-body">
+    <img src="https://images.pexels.com/photos/17177648/pexels-photo-17177648.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="10 Tips to Protect Your Paint & Metal">
+    <p class="img-caption">Photo: Pexels</p>
+    
+<p>Cape Town is hard on cars. Whether you're parked a block from the Atlantic in Sea Point or garaged inland in Goodwood or Bellville, your paint and bodywork are dealing with salt air, intense UV, dust, and the odd hailstorm. The good news is that most of the damage we see could have been slowed down &mdash; or avoided &mdash; with a few simple habits.</p>
+
+<h2>1. Wash Off Salt Air Regularly (Coastal Areas)</h2>
+<p>If you're anywhere near the coast &mdash; Sea Point, Muizenberg, Bloubergstrand, the Atlantic Seaboard &mdash; salt in the air settles on your car daily, even if it never rains. Salt accelerates corrosion on exposed metal, trim, and around badges and seams. A rinse every one to two weeks, focusing on the underside and wheel arches, makes a real difference.</p>
+
+<h2>2. Wash Regularly Even If You're Not Near the Sea</h2>
+<p>Inland doesn't mean immune. Dust, pollen, and general grime sit on paint and, combined with UV, can etch into the clear coat over time if left too long. A wash every two to three weeks keeps the surface clean and lets you spot chips or scratches early.</p>
+
+<h2>3. Wax or Seal the Paint Twice a Year</h2>
+<p>A quality wax or synthetic sealant adds a sacrificial layer that takes the brunt of UV and salt exposure instead of your clear coat. It's inexpensive insurance against fading and premature ageing.</p>
+
+<h2>4. Park Under Cover Where You Can</h2>
+<p>Cape Town sun is intense, and UV is the single biggest long-term cause of paint fading and clear coat degradation. A carport, garage, or even a decent car cover on a hot exposed spot meaningfully extends how long your paint looks good.</p>
+
+<h2>5. Touch Up Stone Chips Before They Spread</h2>
+<p>A small chip exposes bare metal. Left alone &mdash; especially near the coast &mdash; that tiny spot can become a rust patch within months. A dab of touch-up paint is a five-minute job that prevents a much bigger repair later.</p>
+
+<h2>6. Rinse the Underside After Beach or Gravel Roads</h2>
+<p>If you've driven on sand, gravel, or a beach access road, salt and grit gets packed into wheel arches, sills, and the underside where it's out of sight and slow to dry. A regular underbody rinse, especially after a beach trip, is one of the most overlooked rust-prevention habits.</p>
+
+<h2>7. Check and Clear Drain Holes</h2>
+<p>Doors, sills, and the boot floor have small drainage holes designed to let trapped water escape. If they get blocked with leaves or dirt, water sits against bare metal from the inside &mdash; exactly where you can't see it happening. Worth a quick check during a wash.</p>
+
+<h2>8. Don't Ignore Small Dents</h2>
+<p>A small dent might not seem urgent, but it stresses and can crack the paint film at the edges, letting moisture in. Especially in coastal areas, what starts as "just a dent" can become a rust spot within a season or two if the paint's integrity is broken.</p>
+
+<h2>9. Avoid Automated Brush Car Washes</h2>
+<p>The stiff brushes on older-style automated washes cause fine, cumulative scratching (called swirl marks) across clear coat, which dulls the finish over time and makes UV damage worse. Hand washes or touchless washes are gentler on paint.</p>
+
+<h2>10. Get Anything Suspicious Looked at Early</h2>
+<p>A bubble under the paint, a rough patch you can feel with your fingernail, or a new rattle after a knock &mdash; the earlier it's checked, the smaller and cheaper the fix. Waiting almost always turns a touch-up job into a full panel repair.</p>
+
+    <div class="section-label mt-10">Frequently Asked</div>
+    <div class="mt-4"><div class="faq-item"><div class="faq-q">Do I need to worry about rust if I don't live near the sea?</div><div class="faq-a">Less than a coastal car, but yes &mdash; any exposed bare metal from a chip or scratch can rust, and Cape Town's wind carries dust and moisture further inland than people expect, especially in winter.</div></div><div class="faq-item"><div class="faq-q">How often should I wash a car parked near the coast?</div><div class="faq-a">Every one to two weeks is a good baseline, with extra rinses after windy days or any drive along the coast.</div></div><div class="faq-item"><div class="faq-q">Is waxing really necessary, or just cosmetic?</div><div class="faq-a">It's functional, not just cosmetic &mdash; a wax or sealant is a sacrificial barrier that protects the clear coat from UV and salt, which are the two biggest causes of paint ageing in Cape Town.</div></div></div>
+</section>
+
+<div style="background:var(--acid);padding:3.5rem 1.5rem;text-align:center;margin-top:3rem;">
+    <h2 class="brand text-2xl md:text-4xl text-black uppercase tracking-tight mb-3">Get Your Free Quote</h2>
+    <p class="text-black/70 text-base mb-6 font-medium">Based in Goodwood &middot; We service all of Cape Town &middot; Free pick-up & delivery</p>
+    <a href="https://wa.me/27716871308?text=Hi,%20I'd%20like%20a%20free%20quote" style="background:#000;color:var(--acid);padding:1rem 2.5rem;border-radius:0.75rem;font-family:'Gasterol',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:0.05em;display:inline-block;">
+        WhatsApp Us Now &middot; 071 687 1308
+    </a>
+</div>
+
+
+<footer style="background:#050505;border-top:1px solid var(--glass-border);padding:5rem 1.5rem 3rem;">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <img src="assets/ipslogo.png" alt="IPS" class="h-12 mb-4 opacity-80">
+                <p class="text-slate-500 text-xs leading-relaxed">Western Cape's most trusted auto body repair specialists. Factory-quality repairs, free collection, flexible finance.</p>
+            </div>
+            <div>
+                <h4 class="brand text-sm uppercase tracking-widest mb-4" style="color:var(--acid)">Contact</h4>
+                <p class="text-slate-400 text-sm mb-2">7 Bloem Street, Townsend Estate, Goodwood</p>
+                <a href="https://wa.me/27716871308" class="text-slate-400 text-sm hover:text-white transition-colors">+27 71 687 1308</a>
+            </div>
+            <div>
+                <h4 class="brand text-sm uppercase tracking-widest mb-4" style="color:var(--acid)">Trust</h4>
+                <img src="assets/google.webp" alt="4.8 Google Reviews" class="h-20 mb-3">
+                <p class="text-slate-500 text-xs uppercase tracking-widest">The Western Cape's Most Trusted Team</p>
+            </div>
+        </div>
+        <div class="h-divider mb-8"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-700 text-xs tracking-widest">© 2026 IPS // Promotions Hub</p>
+            <p class="text-slate-700 text-xs">Built by <a href="https://forgevertical.com" class="hover:text-slate-400 transition-colors">forgevertical.com</a></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
